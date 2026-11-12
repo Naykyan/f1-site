@@ -480,5 +480,19 @@
   "practice": null,
   "qualifying": null,
   "circuit": null
+ },
+ "gp-2022-3": {
+  "kind": "gp",
+  "year": 2022,
+  "n": 3,
+  "country": "Australie",
+  "flag": "477c4b87b9d85c47e89310417f171dd1",
+  "poster": null,
+  "sponsor": null,
+  "trophy": null,
+  "winner": null,
+  "practice": null,
+  "qualifying": null,
+  "circuit": null
  }
 }
