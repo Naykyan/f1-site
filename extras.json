@@ -1,0 +1,161 @@
+{
+ "gp-2026-1": {
+  "circuit": null,
+  "country": "Australie",
+  "flag": "a0fd2ef6f315533d19315474d4d2ea2a",
+  "kind": "gp",
+  "n": 1,
+  "poster": null,
+  "practice": null,
+  "qualifying": null,
+  "sponsor": null,
+  "trophy": null,
+  "winner": null,
+  "year": 2026
+ },
+ "team-ferrari-2026": {
+  "car": "d66fedf6f016eb3d9608dd0fa4368162",
+  "chassis": "SF-26",
+  "drivers": [
+   {
+    "from": "Charles LECLERC",
+    "helmet": null,
+    "idx": 0,
+    "name": "Charles LECLERC",
+    "number": "#16",
+    "photo": null
+   },
+   {
+    "from": "Lewis HAMILTON",
+    "helmet": null,
+    "idx": 1,
+    "name": "Lewis HAMILTON",
+    "number": "#44",
+    "photo": null
+   }
+  ],
+  "eng": null,
+  "engine": "Ferrari",
+  "kind": "team",
+  "logo": null,
+  "name": "Ferrari",
+  "shirt": null,
+  "year": 2026
+ },
+ "team-kick-sauber-2024": {
+  "car": null,
+  "chassis": "C44",
+  "drivers": [
+   {
+    "from": "Ghanyu ZHOU",
+    "helmet": null,
+    "idx": 0,
+    "name": "Ghanyu ZHOU",
+    "number": "#24",
+    "photo": null
+   },
+   {
+    "from": "Valtteri BOTTAS",
+    "helmet": null,
+    "idx": 1,
+    "name": "Valtteri BOTTAS",
+    "number": "#77",
+    "photo": null
+   }
+  ],
+  "eng": null,
+  "engine": "Ferrari",
+  "kind": "team",
+  "logo": "116ef7ab1c383a56e1bc42f5e2ec9faa",
+  "name": "Kick Sauber",
+  "shirt": null,
+  "year": 2024
+ },
+ "team-kick-sauber-2025": {
+  "car": null,
+  "chassis": "C45",
+  "drivers": [
+   {
+    "from": "Gabriel BORTOLETO",
+    "helmet": null,
+    "idx": 0,
+    "name": "Gabriel BORTOLETO",
+    "number": "#5",
+    "photo": null
+   },
+   {
+    "from": "Nico HULKENBERG",
+    "helmet": null,
+    "idx": 1,
+    "name": "Nico HULKENBERG",
+    "number": "#27",
+    "photo": null
+   }
+  ],
+  "eng": null,
+  "engine": "Ferrari",
+  "kind": "team",
+  "logo": "4cad47da8497db8ef8858f00b386f29a",
+  "name": "Kick Sauber",
+  "shirt": null,
+  "year": 2025
+ },
+ "team-manor-2016": {
+  "car": null,
+  "chassis": "MRT05",
+  "drivers": [
+   {
+    "from": "Pascal WEHRLEIN",
+    "helmet": null,
+    "idx": 0,
+    "name": "Pascal WEHRLEIN",
+    "number": "#94",
+    "photo": null
+   },
+   {
+    "from": "Rio HARYANTO",
+    "helmet": null,
+    "idx": 1,
+    "name": "Rio HARYANTO",
+    "number": "#88",
+    "photo": null
+   }
+  ],
+  "eng": null,
+  "engine": "Mercedes",
+  "kind": "team",
+  "logo": "340bea06e6adc4b49398c5546c4625e5",
+  "name": "Manor",
+  "shirt": null,
+  "year": 2016
+ },
+ "team-mclaren-2026": {
+  "car": null,
+  "chassis": "MCL40",
+  "drivers": [
+   {
+    "from": "Lando NORRIS",
+    "helmet": null,
+    "idx": 0,
+    "name": "Lando NORRIS",
+    "number": "#1 (#4)",
+    "photo": null
+   },
+   {
+    "from": "Oscar PIASTRI",
+    "helmet": null,
+    "idx": 1,
+    "name": "Oscar PIASTRI",
+    "number": "#81",
+    "photo": null
+   }
+  ],
+  "eng": null,
+  "engine": "Mercedes",
+  "kind": "team",
+  "logo": "b56bfb2f5261ef63ae95e3f4c40fa904",
+  "name": "McLaren",
+  "shirt": null,
+  "year": 2026
+ }
+}

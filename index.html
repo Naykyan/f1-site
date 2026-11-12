@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>F1 Encyclopédie</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%8E%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<style>
+:root{--bg:#f6f6f7;--card:#fff;--tx:#15151e;--mut:#6b6b78;--red:#e10600;--bd:#e3e3e8}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15151e;--card:#1f1f2b;--tx:#f2f2f5;--mut:#9a9aa8;--bd:#33334a}}
+:root[data-theme="dark"]{--bg:#15151e;--card:#1f1f2b;--tx:#f2f2f5;--mut:#9a9aa8;--bd:#33334a}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--tx)}
+header{background:#15151e;color:#fff;padding:14px 20px;display:flex;gap:20px;align-items:center;flex-wrap:wrap;border-bottom:4px solid var(--red)}
+header a{color:#fff;text-decoration:none;font-weight:600}
+header .logo{font-size:20px;font-weight:800;letter-spacing:.5px}header .logo b{color:var(--red)}
+header input{margin-left:auto;padding:8px 12px;border-radius:8px;border:0;min-width:200px;font:inherit}
+main{max-width:1100px;margin:0 auto;padding:24px 16px}
+h1{margin:0 0 4px}h2{margin:28px 0 12px;border-left:4px solid var(--red);padding-left:10px}
+.sub{color:var(--mut);margin:0 0 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:12px;text-decoration:none;color:inherit;display:block;text-align:center}
+.card:hover{border-color:var(--red)}
+.card img{width:100%;height:150px;object-fit:contain}
+.card .n{font-weight:700;margin-top:6px}.card .m{color:var(--mut);font-size:14px}
+.year{font-size:34px;font-weight:800;padding:18px 0}
+.team{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px;margin-bottom:18px}
+.team .top{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.team .top img.logo{height:60px;max-width:160px;object-fit:contain}
+.team .car{width:100%;max-width:520px;object-fit:contain}
+.drivers{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:12px}
+.drv{display:flex;gap:10px;align-items:center;text-decoration:none;color:inherit;border:1px solid var(--bd);border-radius:10px;padding:8px}
+.drv img{height:80px;width:64px;object-fit:contain}
+.num{background:var(--red);color:#fff;border-radius:6px;padding:0 6px;font-weight:700;font-size:13px}
+.pair{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.pair figure{margin:0;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:10px;text-align:center}
+.pair img{width:100%;height:220px;object-fit:contain}
+figcaption{color:var(--mut);font-size:14px}
+.card img.flag,h1 img.flag{height:18px;width:auto;vertical-align:middle;border-radius:2px;margin-right:6px}
+.yrow{display:flex;gap:12px;align-items:center;flex-wrap:wrap;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:10px;margin-bottom:10px}
+.yrow>img{height:90px;width:auto;max-width:120px;object-fit:contain}.yrow>img.nl{height:46px}.yrow .yy{font-weight:800;font-size:20px;min-width:56px}
+.sps{display:flex;flex-wrap:wrap;gap:8px;width:100%}.spi{display:flex;gap:4px;align-items:center;border:1px solid var(--bd);border-radius:8px;padding:4px}
+.spi img.fl{height:16px;width:auto;border-radius:2px}.spi img.hh{height:70px;width:auto}
+.top img.eng{height:44px;width:auto;margin-left:auto}.top img.shirt{height:70px;width:auto}.lh{margin:14px 0 6px;font-size:16px}.spi img.lv{height:60px;width:auto;max-width:280px}
+.ad{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:16px;margin-bottom:16px}
+.ad label{display:block;font-size:14px;color:var(--mut);margin:10px 0 3px}
+.ad input,.ad select{width:100%;padding:9px 10px;border:1px solid var(--bd);border-radius:8px;font:inherit;background:var(--bg);color:var(--tx)}
+.ad button,.adi button{background:var(--red);color:#fff;border:0;border-radius:8px;padding:10px 16px;font:inherit;font-weight:600;cursor:pointer;margin-top:14px}
+.adi button{margin:0 0 0 6px;padding:4px 10px;font-size:13px;background:transparent;color:var(--tx);border:1px solid var(--bd)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:600px){.row2{grid-template-columns:1fr}}
+#adMsg{padding:10px 14px;border-radius:8px;margin:0 0 14px}#adMsg.ok{background:#d9f5df;color:#14501f}#adMsg.err{background:#fde0de;color:#8a1510}
+.adi{display:flex;gap:10px;align-items:center;flex-wrap:wrap;border:1px solid var(--bd);border-radius:10px;padding:8px;margin-bottom:8px}.adi img{height:50px;width:auto;max-width:90px;object-fit:contain}.adi .grow{flex:1;min-width:160px}
+.tabs{display:flex;gap:8px;margin:12px 0;flex-wrap:wrap}.tab{background:var(--card);color:var(--tx);border:1px solid var(--bd);border-radius:999px;padding:8px 14px;cursor:pointer;font:inherit}
+.tab.on{background:var(--red);color:#fff;border-color:var(--red)}.tabs.sm .tab{padding:5px 12px;font-size:14px}
+.cur{height:36px;width:auto;vertical-align:middle;margin-right:6px;border-radius:4px}.curw{display:block;font-size:12px;color:var(--mut);margin-top:3px}.gh{margin:18px 0 0;grid-column:1/-1}
+a.link{color:var(--red);text-decoration:none;font-weight:600}
+</style>
+</head>
+<body>
+<header>
+  <a class="logo" href="#home">F1<b>·</b>Encyclopédie</a>
+  <a href="#home">Saisons</a><a href="#drivers">Pilotes</a><a href="#teams">Écuries</a><a href="#podiums">Grands Prix</a><a href="#numbers">Numéros</a><a href="#admin" id="adminLink" hidden>⚙️ Admin</a>
+  <input id="q" type="search" placeholder="Rechercher un pilote ou une écurie…">
+</header>
+<main id="app">Chargement…</main>
+<script>
+addEventListener('error',e=>{if(e.target.tagName==='IMG')e.target.style.visibility='hidden'},true);
+const slug=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+const nice=n=>{const p=n.split(' ');const i=p.findIndex(w=>w===w.toUpperCase()&&w.length>1);return i<0?n:p.slice(0,i).join(' ')+' '+p.slice(i).map(w=>w[0]+w.slice(1).toLowerCase()).join(' ')};
+let DATA=[],drivers={},teams={};
+const $=id=>document.getElementById(id), app=$('app');
+
+let BASE=[],EXTRA=[],DB=null,AS=null,CAN=false,BASE_GP={},BASE_RC={},BASE_NUM={},BASE_EC={};
+const clone=o=>JSON.parse(JSON.stringify(o));
+const LOCAL={};
+const blob=id=>id?(LOCAL[id]||'img/extra/'+id+'.webp'):null;
+function index(){
+  teams={};drivers={};
+  DATA.forEach(s=>s.teams.forEach(t=>{const tk=slug(t.name);(teams[tk]??={name:t.name,seasons:[]}).seasons.push({year:s.year,...t});t.drivers.forEach(x=>{const k=slug(x.name);(drivers[k]??={name:x.name,seasons:[]}).seasons.push({year:s.year,team:t.name,car:t.car,...x})})}));
+  for(const n in NUM)NUM[n].forEach(b=>{const k=slug(b.name);if(!drivers[k])drivers[k]={name:b.name,seasons:[],pseudo:true}});
+}
+function renames(ex){const r=[];ex.filter(e=>e.kind==='team').forEach(e=>(e.drivers||[]).forEach(x=>{if(x.from&&x.name&&x.from!==x.name)r.push([x.from,x.name])}));return r}
+function applyExtra(base,ex){
+  const D=clone(base),sea=y=>{let s=D.find(x=>x.year===y);if(!s){s={year:y,teams:[]};D.push(s)}return s};
+  const team=(y,name)=>{const s=sea(y);let t=s.teams.find(x=>slug(x.name)===slug(name));if(!t){t={name,chassis:'',engine:'',logo:null,car:null,drivers:[]};s.teams.push(t)}return t};
+  ex.filter(e=>e.kind==='team').forEach(e=>{const t=team(e.year,e.name);
+    if(e.chassis)t.chassis=e.chassis;if(e.engine)t.engine=e.engine;if(e.logo)t.logo=blob(e.logo);if(e.car)t.car=blob(e.car);
+    (e.drivers||[]).forEach(x=>{let d=t.drivers[x.idx];if(!d){d={name:x.name,number:'',photo:null,helmet:null};t.drivers.push(d)}
+      if(x.name)d.name=x.name;if(x.number)d.number=x.number;if(x.photo)d.photo=blob(x.photo);if(x.helmet)d.helmet=blob(x.helmet)})});
+  ex.filter(e=>e.kind==='special'&&e.t==='team').forEach(e=>team(e.year,e.name));
+  renames(ex).forEach(([a,b])=>D.forEach(s=>s.teams.forEach(t=>t.drivers.forEach(d=>{if(slug(d.name)===slug(a))d.name=b}))));
+  D.sort((a,b)=>b.year-a.year);return D;
+}
+function applyGP(g0,r0,ex){
+  const G=clone(g0),R=clone(r0);
+  ex.filter(e=>e.kind==='gp').forEach(e=>{
+    const arr=G[e.year]||(G[e.year]=[]);let g=arr.find(x=>x.n===e.n);
+    if(!g){g={n:e.n,country:'',flag:null,poster:null,sponsor:null,trophy:null,winner:null};arr.push(g);arr.sort((a,b)=>a.n-b.n)}
+    if(e.country)g.country=e.country;
+    for(const k of['flag','poster','sponsor','trophy','winner'])if(e[k])g[k]=blob(e[k]);
+    const yr=R[e.year]||(R[e.year]={});const r=yr[e.n]||(yr[e.n]=[null,null,null,null,null,null]);
+    if(e.circuit)r[0]=blob(e.circuit);if(e.practice)r[1]=blob(e.practice);if(e.qualifying)r[4]=blob(e.qualifying);
+  });
+  return[G,R];
+}
+function applySp(n0,e0,ex){
+  const N=clone(n0),E=clone(e0);
+  renames(ex).forEach(([a,b])=>{for(const n in N)N[n].forEach(x=>{if(slug(x.name)===slug(a))x.name=b})});
+  ex.filter(e=>e.kind==='hide').forEach(h=>{
+    if(h.t==='driver'){(N[h.n]||[]).forEach(b=>{if(slug(b.name)===slug(h.name))b.years.forEach(y=>{if(y.y===h.year&&y.s[h.gi])y.s[h.gi]=null})})}
+    else{const k=Object.keys(E).find(n=>slug(n)===slug(h.name));const y=k&&E[k][h.year];if(y&&y.x[h.gi])y.x[h.gi]=null}
+  });
+  for(const n in N)N[n].forEach(b=>b.years.forEach(y=>{y.s=y.s.filter(Boolean)}));
+  for(const k in E)for(const y in E[k])E[k][y].x=E[k][y].x.filter(Boolean);
+  ex.filter(e=>e.kind==='team').forEach(e=>(e.drivers||[]).forEach(x=>{
+    const m=String(x.number||'').match(/\d+/);if(!m||!x.name)return;
+    const L=N[m[0]]||(N[m[0]]=[]);let b=L.find(z=>slug(z.name)===slug(x.name));
+    let y=b&&b.years.find(z=>z.y===e.year);
+    if(!y&&!(x.numImg||x.photo||x.helmet))return;
+    if(!b){b={name:x.name,years:[]};L.push(b)}
+    if(!y){y={y:e.year,n:null,p:null,h:null,s:[]};b.years.push(y);b.years.sort((a,c)=>c.y-a.y)}
+    if(x.numImg)y.n=blob(x.numImg);if(x.photo)y.p=blob(x.photo);if(x.helmet)y.h=blob(x.helmet);
+  }));
+  const ent=(name,year)=>{const k=Object.keys(E).find(n=>slug(n)===slug(name))||name;const o=E[k]||(E[k]={});return o[year]||(o[year]={s:null,e:null,x:[]})};
+  ex.filter(e=>e.kind==='team'&&(e.shirt||e.eng)).forEach(e=>{const y=ent(e.name,e.year);if(e.shirt)y.s=blob(e.shirt);if(e.eng)y.e=blob(e.eng)});
+  ex.filter(e=>e.kind==='special').forEach(e=>{
+    if(e.t==='driver'){
+      const num=String(e.number||'').replace('#',''),L=N[num]||(N[num]=[]);let b=L.find(x=>slug(x.name)===slug(e.name));
+      if(!b){b={name:e.name,years:[]};L.push(b)}
+      let y=b.years.find(x=>x.y===e.year);if(!y){y={y:e.year,n:null,p:null,h:null,s:[]};b.years.push(y);b.years.sort((a,c)=>c.y-a.y)}
+      y.s.push({f:blob(e.flag),h:(e.imgs||[]).map(blob)});
+    }else ent(e.name,e.year).x.push({f:blob(e.flag),l:(e.imgs||[]).map(blob)});
+  });
+  return[N,E];
+}
+function recompute(){
+  DATA=applyExtra(BASE,EXTRA);
+  const g=applyGP(BASE_GP,BASE_RC,EXTRA);window.GP=g[0];window.RC=g[1];
+  const s=applySp(BASE_NUM,BASE_EC,EXTRA);window.NUM=s[0];window.EC=s[1];
+  Object.keys(ECS).forEach(k=>delete ECS[k]);
+  index();
+}
+let CFG=null,EX_SHA=null,Q=Promise.resolve();
+const enqueue=fn=>{const p=Q.then(fn);Q=p.catch(()=>{});return p};
+const u8b64=s=>{const b=new TextEncoder().encode(s);let o='';for(let i=0;i<b.length;i+=8192)o+=String.fromCharCode.apply(null,b.subarray(i,i+8192));return btoa(o)};
+const b64u8=b=>new TextDecoder().decode(Uint8Array.from(atob(b.replace(/\s/g,'')),c=>c.charCodeAt(0)));
+const blobB64=bl=>new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(String(r.result).split(',')[1]);r.onerror=()=>rej(new Error('Lecture de l’image impossible'));r.readAsDataURL(bl)});
+async function gh(path,o={}){
+  const get=(o.method||'GET')==='GET';
+  const url='https://api.github.com/repos/'+encodeURIComponent(CFG.owner)+'/'+encodeURIComponent(CFG.repo)+'/contents/'+path.split('/').map(encodeURIComponent).join('/')+(get?'?ref='+encodeURIComponent(CFG.branch)+'&t='+Date.now():'');
+  const r=await fetch(url,{method:o.method||'GET',body:o.body,headers:{Authorization:'Bearer '+CFG.token,Accept:'application/vnd.github+json','Content-Type':'application/json'}});
+  if(r.status===404&&o.allow404)return null;
+  if(!r.ok){let m='';try{m=(await r.json()).message}catch(_){}
+    throw new Error('GitHub '+r.status+(m?' : '+m:'')+(r.status===401?' (clé refusée ou expirée)':(r.status===403||r.status===404)?' (droits insuffisants sur le dépôt ?)':''))}
+  return r.json();
+}
+const loadExtras=async()=>{const j=await gh('extras.json',{allow404:true});if(!j){EX_SHA=null;return{}}EX_SHA=j.sha;try{return JSON.parse(b64u8(j.content))}catch(e){return{}}};
+const putExtras=async(m,msg)=>{const body={message:msg,content:u8b64(JSON.stringify(m,null,1)),branch:CFG.branch};if(EX_SHA)body.sha=EX_SHA;const r=await gh('extras.json',{method:'PUT',body:JSON.stringify(body)});EX_SHA=r.content.sha};
+const onExtras=m=>{const had=EXTRA.length>0;EXTRA=Object.entries(m).map(([id,v])=>({id,...v}));if(had||EXTRA.length)recompute();if(location.hash==='#admin')adminRefresh();else route()};
+function setupGH(cfg){
+  CFG=cfg;CAN=true;
+  DB={doc:p=>{const id=p.split('/')[1];return{
+    set:d=>enqueue(async()=>{const m=await loadExtras();m[id]=d;await putExtras(m,'Admin : '+id);onExtras(m)}),
+    delete:()=>enqueue(async()=>{const m=await loadExtras();delete m[id];await putExtras(m,'Admin : retrait '+id);onExtras(m)})}}};
+  AS={
+    upload:async bl=>{
+      const id=[...crypto.getRandomValues(new Uint8Array(16))].map(x=>x.toString(16).padStart(2,'0')).join('');const b64=await blobB64(bl);
+      await enqueue(()=>gh('img/extra/'+id+'.webp',{method:'PUT',body:JSON.stringify({message:'Admin : image',content:b64,branch:CFG.branch})}));
+      LOCAL[id]=URL.createObjectURL(bl);return{id}},
+    delete:id=>enqueue(async()=>{const j=await gh('img/extra/'+id+'.webp',{allow404:true});
+      if(j)await gh('img/extra/'+id+'.webp',{method:'DELETE',body:JSON.stringify({message:'Admin : retrait image',sha:j.sha,branch:CFG.branch})})})};
+  $('adminLink').hidden=false;
+  enqueue(async()=>{onExtras(await loadExtras())}).catch(()=>{});
+}
+function initAdmin(){let c=null;try{c=JSON.parse(localStorage.getItem('f1cfg')||'null')}catch(e){}if(c&&c.token)setupGH(c)}
+function adminLogin(){
+  let c={};try{c=JSON.parse(localStorage.getItem('f1cfg')||'{}')||{}}catch(e){}
+  const h=location.hostname.endsWith('.github.io')?location.hostname.split('.')[0]:'',p=location.pathname.split('/').filter(Boolean)[0]||'';
+  app.innerHTML=`<h1>Administration</h1><p class="sub">Connectez-vous une seule fois avec votre compte GitHub. Vos informations restent uniquement dans ce navigateur.</p><div id="adMsg" hidden></div>
+  <section class="ad"><div class="row2"><div><label>Nom d’utilisateur GitHub</label><input id="gOwner" value="${c.owner||h}"></div><div><label>Nom du dépôt (projet)</label><input id="gRepo" value="${c.repo||(p&&!p.includes('.')?p:'')}"></div>
+  <div><label>Branche</label><input id="gBranch" value="${c.branch||'main'}"></div><div><label>Clé d’accès (token)</label><input id="gToken" type="password" value="${c.token||''}"></div></div><button class="sv" id="gGo">Se connecter</button></section>`;
+  $('gGo').onclick=async e=>{
+    e.target.disabled=true;
+    const cfg={owner:$('gOwner').value.trim(),repo:$('gRepo').value.trim(),branch:$('gBranch').value.trim()||'main',token:$('gToken').value.trim()};
+    try{
+      const r=await fetch('https://api.github.com/repos/'+encodeURIComponent(cfg.owner)+'/'+encodeURIComponent(cfg.repo),{headers:{Authorization:'Bearer '+cfg.token,Accept:'application/vnd.github+json'}});
+      if(!r.ok)throw new Error('GitHub '+r.status+' : vérifiez le nom d’utilisateur, le nom du dépôt et la clé.');
+      const j=await r.json();
+      if(j.permissions&&!j.permissions.push)throw new Error('Cette clé n’a pas le droit de modifier le dépôt (autorisation « Contents : Read and write » manquante).');
+      try{localStorage.setItem('f1cfg',JSON.stringify(cfg))}catch(_){}
+      setupGH(cfg);admin();say('Connecté. Vous pouvez modifier le site.');
+    }catch(x){say(x.message,false);e.target.disabled=false}
+  };
+}
+function adminLogout(){try{localStorage.removeItem('f1cfg')}catch(e){}CAN=false;DB=null;AS=null;CFG=null;$('adminLink').hidden=true;location.hash='#home'}
+
+async function boot(){
+  const [d,ex]=await Promise.all([fetch('data.json').then(r=>{if(!r.ok)throw new Error('data.json introuvable ('+r.status+')');return r.json()}),
+    fetch('extras.json?t='+Date.now()).then(r=>r.ok?r.json():{}).catch(()=>({}))]);
+  BASE=d.seasons;DATA=BASE;window.GP=d.gp;window.RC=d.rc;window.NUM=d.num;window.EC=d.ec;
+  BASE_GP=window.GP;BASE_RC=window.RC;BASE_NUM=window.NUM;BASE_EC=window.EC;
+  EXTRA=Object.entries(ex||{}).map(([id,v])=>({id,...v}));
+  if(EXTRA.length)recompute();else index();
+  route();initAdmin();
+}
+boot().catch(e=>{app.innerHTML='<h1>Chargement impossible</h1><p>'+e.message+'</p><p class="sub">Si vous ouvrez le fichier directement depuis votre ordinateur, utilisez plutôt l’adresse en ligne du site.</p>'});
+addEventListener('hashchange',route);
+
+function route(){
+  const hs=location.hash.slice(1);scrollTo(0,0);
+  if(hs.startsWith('season-'))return season(+hs.slice(7));
+  if(hs.startsWith('driver-'))return driver(hs.slice(7));
+  if(hs.startsWith('team-'))return team(hs.slice(5));
+  if(hs==='admin')return admin();
+  if(hs==='numbers')return listNum();
+  if(hs.startsWith('number-'))return numPage(hs.slice(7));
+  if(hs==='podiums')return listGP();
+  if(hs.startsWith('gp-'))return gpSeason(+hs.slice(3));
+  if(hs.startsWith('race-'))return race(hs.slice(5));
+  if(hs==='drivers')return listDrivers();
+  if(hs==='teams')return listTeams();
+  home();
+}
+function home(){
+  app.innerHTML=`<h1>Saisons de Formule 1</h1><p class="sub">${DATA.length} saisons · ${Object.keys(teams).length} écuries · ${Object.keys(drivers).length} pilotes</p>
+  <div class="grid">${DATA.map(s=>`<a class="card" href="#season-${s.year}"><div class="year">${s.year}</div><div class="m">${s.teams.length} écuries · ${s.teams.reduce((a,t)=>a+t.drivers.length,0)} pilotes</div></a>`).join('')}</div>`;
+}
+function season(y){
+  const s=DATA.find(x=>x.year===y);if(!s)return home();
+  app.innerHTML=`<h1>Saison ${y}</h1><p class="sub"><a class="link" href="#home">← Toutes les saisons</a></p>${GP[y]?`<p><a class="link" href="#gp-${y}">🏆 Voir les ${GP[y].length} Grands Prix de ${y} →</a></p>`:''}`+s.teams.map(t=>`
+  <section class="team"><div class="top"><img class="logo" src="${t.logo}" alt="${t.name}">
+    <div><h3 style="margin:0"><a class="link" href="#team-${slug(t.name)}">${t.name}</a></h3><div class="m sub" style="margin:0">${t.chassis} · moteur ${t.engine}</div></div></div>
+    <img class="car" src="${t.car}" alt="${t.chassis}" loading="lazy">
+    <div class="drivers">${t.drivers.map(d=>`<a class="drv" href="#driver-${slug(d.name)}"><img src="${d.photo}" loading="lazy" alt=""><img src="${d.helmet}" loading="lazy" alt="" style="width:64px"><div><b>${nice(d.name)}</b><br><span class="num">${d.number}</span></div></a>`).join('')}</div></section>`).join('');
+}
+
+function spItems(gs){return gs.map(g=>`<div class="spi">${g.f?`<img class="fl" src="${g.f}" alt="">`:''}${g.h.map(x=>`<img class="hh" src="${x}" loading="lazy" alt="">`).join('')}</div>`).join('')}
+function listNum(){
+  const ks=Object.keys(NUM).sort((a,b)=>a-b);
+  app.innerHTML=`<h1>Numéros</h1><p class="sub">${ks.length} numéros de voiture et les pilotes qui les ont portés</p><div class="grid">${ks.map(n=>{const b=NUM[n];return `<a class="card" href="#number-${n}"><div class="year">#${n}</div><div class="n">${nice(b[0].name)}</div><div class="m">${b.length>1?'+ '+(b.length-1)+' autre(s) pilote(s)':'1 pilote'}</div></a>`}).join('')}</div>`;
+}
+function numPage(n){
+  const b=NUM[n];if(!b)return listNum();
+  app.innerHTML=`<h1>Numéro #${n}</h1><p class="sub"><a class="link" href="#numbers">← Tous les numéros</a></p>`+b.map(d=>`<h2>${drivers[slug(d.name)]?`<a class="link" href="#driver-${slug(d.name)}">${nice(d.name)}</a>`:nice(d.name)}</h2>`+d.years.map(y=>`<div class="yrow"><span class="yy">${y.y}</span>${y.n?`<img class="nl" src="${y.n}" alt="">`:''}${y.p?`<img src="${y.p}" loading="lazy" alt="">`:''}${y.h?`<img src="${y.h}" loading="lazy" alt="">`:''}</div>`).join('')).join('');
+}
+function spDriver(k){
+  const rows=[],nums=[];
+  for(const n in NUM)NUM[n].forEach(b=>{if(slug(b.name)===k){nums.push([n,b.years.map(y=>y.y)]);b.years.forEach(y=>{if(y.s.length)rows.push({y:y.y,n,s:y.s})})}});
+  let o='';
+  if(nums.length)o+=`<h2>Numéros portés</h2><p>${nums.map(([n,ys])=>`<a class="link" href="#number-${n}">#${n}</a> (${Math.min(...ys)}${Math.max(...ys)!==Math.min(...ys)?'–'+Math.max(...ys):''})`).join(' · ')}</p>`;
+  if(rows.length){rows.sort((a,b)=>b.y-a.y);o+=`<h2>Casques spéciaux</h2>`+rows.map(r=>`<p class="sub" style="margin:10px 0 4px">${r.y}${r.n?` · <a class="link" href="#number-${r.n}">#${r.n}</a>`:''}</p><div class="sps">${spItems(r.s)}</div>`).join('')}
+  return o;
+}
+function driver(k){
+  const d=drivers[k];if(!d)return home();
+  const ss=[...d.seasons].sort((a,b)=>b.year-a.year);
+  app.innerHTML=`<h1>${nice(d.name)}</h1><p class="sub"><a class="link" href="#drivers">← Pilotes</a> · ${ss.length} saison(s) dans la base : ${ss.map(s=>s.year).reverse().join(', ')}</p>
+  <h2>Casques</h2><div class="pair">${ss.map(s=>`<figure><img src="${s.helmet}" loading="lazy" alt="Casque ${s.year}"><figcaption><a class="link" href="#season-${s.year}">${s.year}</a> · ${s.number}</figcaption></figure>`).join('')}</div>
+  <h2>Parcours</h2><div class="pair">${ss.map(s=>`<figure><img src="${s.photo}" loading="lazy" alt=""><figcaption>${s.year} · <a class="link" href="#team-${slug(s.team)}">${s.team}</a></figcaption></figure>`).join('')}</div>${spDriver(k)}`;
+}
+
+const ECS={};
+function ecOf(k){if(!Object.keys(ECS).length)for(const n in EC)ECS[slug(n)]=EC[n];return ECS[k]}
+function tx(k,y,part){
+  const e=(ecOf(k)||{})[y];if(!e)return '';
+  if(part==='top')return `${e.e?`<img class="eng" src="${e.e}" alt="Moteur">`:''}${e.s?`<img class="shirt" src="${e.s}" loading="lazy" alt="T-shirt">`:''}`;
+  if(!e.x.length)return '';
+  return `<h4 class="lh">Livrées spéciales</h4><div class="sps">${e.x.map(g=>`<div class="spi">${g.f?`<img class="fl" src="${g.f}" alt="">`:''}${g.l.map(x=>`<img class="lv" src="${x}" loading="lazy" alt="">`).join('')}</div>`).join('')}</div>`;
+}
+function team(k){
+  const t=teams[k];if(!t)return home();
+  const ss=[...t.seasons].sort((a,b)=>b.year-a.year);
+  app.innerHTML=`<h1>${t.name}</h1><p class="sub"><a class="link" href="#teams">← Écuries</a> · ${ss.length} saison(s) dans la base</p>
+  ${ss.map(s=>`<section class="team"><div class="top"><img class="logo" src="${s.logo}" alt=""><div><h3 style="margin:0"><a class="link" href="#season-${s.year}">${s.year}</a> · ${s.chassis}</h3><div class="m sub" style="margin:0">Moteur ${s.engine}</div></div>${tx(k,s.year,'top')}</div>
+  <img class="car" src="${s.car}" loading="lazy" alt="">
+  <div class="drivers">${s.drivers.map(d=>`<a class="drv" href="#driver-${slug(d.name)}"><img src="${d.photo}" loading="lazy" alt=""><div><b>${nice(d.name)}</b><br><span class="num">${d.number}</span></div></a>`).join('')}</div>${tx(k,s.year,'sp')}</section>`).join('')}`;
+}
+
+const flag=g=>g.flag?`<img class="flag" src="${g.flag}" alt="">`:'';
+function listGP(){
+  const ys=Object.keys(GP).sort((a,b)=>b-a);
+  app.innerHTML=`<h1>Grands Prix</h1><p class="sub">Affiches, trophées et vainqueurs, saison par saison</p><div class="grid">${ys.map(y=>`<a class="card" href="#gp-${y}"><div class="year">${y}</div><div class="m">${GP[y].length} Grands Prix</div></a>`).join('')}</div>`;
+}
+function gpSeason(y){
+  const r=GP[y];if(!r)return listGP();
+  app.innerHTML=`<h1>Grands Prix ${y}</h1><p class="sub"><a class="link" href="#podiums">← Toutes les saisons</a> · <a class="link" href="#season-${y}">Écuries et pilotes ${y}</a></p><div class="grid">${r.map(g=>`<a class="card" href="#race-${y}-${g.n}"><img src="${g.winner||g.poster||g.trophy||g.flag||''}" loading="lazy" alt=""><div class="n">${flag(g)}${g.country}</div><div class="m">Course n°${g.n}</div></a>`).join('')}</div>`;
+}
+const RCL=['Circuit','Essais','Essais / Sprint','Essais / Sprint','Pole position','Vainqueur'];
+function rc(y,n){
+  const a=(window.RC[y]||{})[n];if(!a||!a.some(Boolean))return '';
+  return `<h2>Récap du week-end</h2><div class="pair">${a.map((s,i)=>s?`<figure><img src="${s}" loading="lazy" alt=""><figcaption>${RCL[i]}</figcaption></figure>`:'').join('')}</div>`;
+}
+function race(k){
+  const [y,n]=k.split('-').map(Number),g=(GP[y]||[]).find(x=>x.n===n);if(!g)return listGP();
+  const fig=(s,c)=>s?`<figure><img src="${s}" alt="">${'<figcaption>'+c+'</figcaption>'}</figure>`:'';
+  app.innerHTML=`<h1>${flag(g)}Grand Prix ${g.country} ${y}</h1><p class="sub"><a class="link" href="#gp-${y}">← Grands Prix ${y}</a> · course n°${n}</p><div class="pair">${fig(g.poster,'Affiche')}${fig(g.winner,'Vainqueur')}${fig(g.trophy,'Trophée')}${fig(g.sponsor,'Sponsor')}</div>${rc(y,n)}`;
+}
+
+function say(t,ok=true){const m=$('adMsg');if(!m)return;m.hidden=false;m.textContent=t;m.className=ok?'ok':'err'}
+const fmtName=n=>{const p=n.trim().split(/\s+/);p[p.length-1]=p[p.length-1].toUpperCase();return p.join(' ')};
+const fmtNum=n=>{n=n.trim();return n&&!n.startsWith('#')?'#'+n:n};
+async function upImg(file,max){
+  if(!file)return null;
+  const bmp=await createImageBitmap(file),r=Math.min(1,max*1.5/Math.max(bmp.width,bmp.height));
+  const c=document.createElement('canvas');c.width=Math.round(bmp.width*r);c.height=Math.round(bmp.height*r);
+  c.getContext('2d').drawImage(bmp,0,0,c.width,c.height);
+  const bl=await new Promise(res=>c.toBlob(res,'image/webp',.88));
+  return (await AS.upload(bl)).id;
+}
+let AT='1',AM='add',REPL=null,LASTY=null;
+const numRow=(name,y,num)=>{const ks=String(num||'').match(/\d+/g)||Object.keys(NUM);for(const n of ks)for(const b of (NUM[n]||[]))if(slug(b.name)===slug(name)){const r=b.years.find(z=>z.y===y);if(r&&r.n)return r.n}return null};
+function confirmBtn(btn,fn){
+  btn.onclick=()=>{
+    if(btn.dataset.arm){delete btn.dataset.arm;fn();return}
+    btn.dataset.arm='1';const t=btn.textContent;btn.textContent='Confirmer ?';btn.style.borderColor='var(--red)';
+    setTimeout(()=>{if(btn.dataset.arm){delete btn.dataset.arm;btn.textContent=t;btn.style.borderColor=''}},4000);
+  };
+}
+const yearsAll=()=>DATA.map(s=>s.year);
+const F=(id,label,o={})=>`<div class="f" data-g="${o.g||'all'}"><label>${label}</label><input id="${id}" ${o.file?`type="file" accept="image/*"${o.multi?' multiple':''}`:`type="${o.type||'text'}"`}${o.list?` list="${o.list}"`:''}${o.ph?` placeholder="${o.ph}"`:''}>${o.file?`<span class="curw" id="cw_${id}"></span>`:''}</div>`;
+const curImg=(id,src)=>{const e=$('cw_'+id);if(e)e.innerHTML=src?`<img class="cur" src="${src}" alt=""> image actuelle`:''};
+const YS=(p,add)=>`<div class="row2"><div><label>Saison</label><select id="${p}y">${yearsAll().map(y=>`<option>${y}</option>`).join('')}</select></div>${add?`<div><label>Ou nouvelle saison (année)</label><input id="${p}ny" type="number" placeholder="2027"></div>`:'<div></div>'}</div>`;
+const yearOf=p=>{const n=parseInt(($(p+'ny')||{}).value);return n>=1950&&n<=2100?n:+$(p+'y').value};
+const GS=opts=>`<div><label>Que souhaitez-vous modifier ?</label><select id="grp">${opts.map(([v,l])=>`<option value="${v}">${l}</option>`).join('')}</select></div>`;
+function applyGrp(){const g=($('grp')||{}).value||'all';$$('#adBody [data-g]').forEach(e=>{e.style.display=(e.dataset.g==='all'||g==='all'||e.dataset.g===g)?'':'none'})}
+const $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const knownTeams=()=>[...new Set(DATA.flatMap(s=>s.teams.map(t=>t.name)))];
+const knownDrv=()=>Object.values(drivers).map(d=>d.name);
+function dls(){const a=$('dlT'),b=$('dlD');if(a)a.innerHTML=knownTeams().map(n=>`<option value="${n}">`).join('');if(b)b.innerHTML=knownDrv().map(n=>`<option value="${n}">`).join('')}
+const assetIds=e=>[...new Set((JSON.stringify(e).match(/"[0-9a-f]{32}"/g)||[]).map(x=>x.slice(1,-1)))];
+const run=async(btn,fn)=>{btn.disabled=true;try{await fn();adminRefresh();say('Enregistré. Le site est à jour.')}catch(e){say('Échec : '+((e&&e.message)||(e&&e.code)||e),false)}btn.disabled=false};
+
+function admin(){
+  if(!(CAN&&DB&&AS)){adminLogin();return}
+  app.innerHTML=`<h1>Administration</h1><p class="sub">Ajoutez ou corrigez ce qui existe déjà. Les images sont réduites et enregistrées automatiquement. Une image laissée vide conserve l’ancienne. Les changements apparaissent sur le site public environ 1 à 2 minutes après l’enregistrement.</p><p><button class="tab" id="logout">Se déconnecter</button></p><div id="adMsg" hidden></div>
+  <div class="tabs">${[['1','1. Saisons et écuries'],['2','2. Grands Prix'],['3','3. Casques et livrées spéciaux']].map(([k,l])=>`<button class="tab${AT===k?' on':''}" data-tab="${k}">${l}</button>`).join('')}</div>
+  <div class="tabs sm"><button class="tab${AM==='add'?' on':''}" data-mode="add">➕ Ajouter</button><button class="tab${AM==='mod'?' on':''}" data-mode="mod">✏️ Modifier</button></div>
+  <div id="adBody"></div><section class="ad"><h2>Historique des ajouts et modifications</h2><div id="adList"></div></section>
+  <datalist id="dlT"></datalist><datalist id="dlD"></datalist>`;
+  $$('[data-tab]').forEach(b=>b.onclick=()=>{AT=b.dataset.tab;REPL=null;admin()});
+  $$('[data-mode]').forEach(b=>b.onclick=()=>{AM=b.dataset.mode;REPL=null;admin()});
+  $('logout').onclick=adminLogout;dls();({'1':tab1,'2':tab2,'3':tab3})[AT]();adminList();
+}
+function adminRefresh(){
+  if(location.hash!=='#admin'||!$('adBody'))return;
+  ['a','g','s'].forEach(p=>{const s=$(p+'y');if(!s)return;const v=s.value;s.innerHTML=yearsAll().map(y=>`<option>${y}</option>`).join('');s.value=(LASTY&&yearsAll().includes(LASTY)&&$(p+'ny'))?LASTY:v});
+  dls();adminList();
+}
+
+/* ---------- Onglet 1 : saisons et écuries ---------- */
+function tab1(){
+  const mod=AM==='mod';
+  $('adBody').innerHTML=`<section class="ad">${YS('a',!mod)}${mod?`<div class="row2"><div><label>Écurie à modifier</label><select id="mTeam"></select></div>${GS([['all','Tout'],['team','L’écurie, la voiture et le t-shirt'],['d0','Pilote 1'],['d1','Pilote 2']])}</div>`:''}</section>
+  <section class="ad"><h2>${mod?'Modifier':'Ajouter'} une écurie</h2><div class="row2">
+  ${F('tName','Nom de l’écurie',{list:'dlT',g:'team'})}${F('tChassis','Nom du châssis',{g:'team'})}${F('tEngine','Moteur',{g:'team'})}${F('tEng','Logo du moteur (image)',{file:1,g:'team'})}
+  ${F('tLogo','Logo de l’écurie (image)',{file:1,g:'team'})}${F('tCar','Photo de la voiture',{file:1,g:'team'})}${F('tShirt','T-shirt de la saison (image)',{file:1,g:'team'})}</div>
+  ${[0,1].map(i=>`<h3 class="gh" data-g="d${i}">Pilote ${i+1}</h3><div class="row2" data-g="d${i}">${F('d'+i+'Name','Nom',{list:'dlD',g:'d'+i})}${F('d'+i+'Num','Numéro',{g:'d'+i})}${F('d'+i+'NumImg','Photo du numéro (image)',{file:1,g:'d'+i})}${F('d'+i+'Photo','Photo (image)',{file:1,g:'d'+i})}${F('d'+i+'Helmet','Casque (image)',{file:1,g:'d'+i})}</div>`).join('')}
+  <button class="sv" id="save">Enregistrer</button></section>`;
+  const fillMT=()=>{const s=DATA.find(x=>x.year===+$('ay').value);const v=$('mTeam').value;$('mTeam').innerHTML=(s?s.teams:[]).map(t=>`<option>${t.name}</option>`).join('');if(v&&[...$('mTeam').options].some(o=>o.value===v))$('mTeam').value=v;prefill()};
+  function prefill(){
+    const s=DATA.find(x=>x.year===+$('ay').value),t=s&&s.teams.find(x=>x.name===$('mTeam').value);if(!t)return;
+    $('tName').value=t.name;$('tName').disabled=true;$('tChassis').value=t.chassis||'';$('tEngine').value=t.engine||'';
+    const e=(ecOf(slug(t.name))||{})[s.year]||{};curImg('tEng',e.e);curImg('tLogo',t.logo);curImg('tCar',t.car);curImg('tShirt',e.s);
+    [0,1].forEach(i=>{const d=t.drivers[i]||{};$('d'+i+'Name').value=d.name?nice(d.name):'';$('d'+i+'Num').value=d.number||'';curImg('d'+i+'NumImg',numRow(d.name,s.year,d.number));curImg('d'+i+'Photo',d.photo);curImg('d'+i+'Helmet',d.helmet)});
+  }
+  if(mod){$('ay').onchange=fillMT;$('mTeam').onchange=prefill;fillMT()}
+  if($('grp'))$('grp').onchange=applyGrp;applyGrp();
+  $('save').onclick=e=>run(e.target,async()=>{
+    const y=mod?+$('ay').value:yearOf('a'),name=(mod?$('mTeam').value:$('tName').value).trim();
+    if(!name)throw new Error('Indiquez le nom de l’écurie.');
+    const s=DATA.find(x=>x.year===y),cur=s&&s.teams.find(x=>slug(x.name)===slug(name)),id='team-'+slug(name)+'-'+y,old=EXTRA.find(x=>x.id===id)||{};
+    const doc={kind:'team',year:y,name:cur?cur.name:name,chassis:$('tChassis').value.trim()||old.chassis||'',engine:$('tEngine').value.trim()||old.engine||'',
+      logo:(await upImg($('tLogo').files[0],300))||old.logo||null,car:(await upImg($('tCar').files[0],900))||old.car||null,
+      shirt:(await upImg($('tShirt').files[0],300))||old.shirt||null,eng:(await upImg($('tEng').files[0],150))||old.eng||null,drivers:[]};
+    for(const i of [0,1]){
+      const nm=$('d'+i+'Name').value.trim(),f1=$('d'+i+'Photo').files[0],f2=$('d'+i+'Helmet').files[0],f3=$('d'+i+'NumImg').files[0],num=$('d'+i+'Num').value;
+      const od=(old.drivers||[]).find(x=>x.idx===i)||{},bd=cur&&cur.drivers[i];
+      if(!nm&&!f1&&!f2&&!f3&&!num.trim()&&!od.name)continue;
+      const nm2=nm?fmtName(nm):(od.name||(bd&&bd.name)||'');if(!nm2)throw new Error('Indiquez le nom du pilote '+(i+1)+'.');
+      doc.drivers.push({idx:i,name:nm2,from:od.from||(bd&&bd.name)||'',number:fmtNum(num)||od.number||'',
+        photo:(await upImg(f1,500))||od.photo||null,helmet:(await upImg(f2,500))||od.helmet||null,numImg:(await upImg(f3,200))||od.numImg||null});
+    }
+    await DB.doc('extra/'+id).set(doc);LASTY=y;if($('any'))$('any').value='';if($('any'))$('any').value='';
+    if(!mod){['tName','tChassis','tEngine','tEng','tLogo','tCar','tShirt','d0Name','d0Num','d0NumImg','d0Photo','d0Helmet','d1Name','d1Num','d1NumImg','d1Photo','d1Helmet'].forEach(i=>$(i).value='');$('any').value=''}
+    else prefill();
+  });
+}
+
+/* ---------- Onglet 2 : Grands Prix ---------- */
+function tab2(){
+  const mod=AM==='mod';
+  $('adBody').innerHTML=`<section class="ad">${YS('g',!mod)}${mod?`<div class="row2"><div><label>Grand Prix à modifier</label><select id="mRace"></select></div>${GS([['all','Tout'],['id','Nom, numéro et drapeau'],['img','Affiche, sponsor et trophée'],['rec','Essais, qualifications et circuit'],['win','Vainqueur']])}</div>`:''}</section>
+  <section class="ad"><h2>${mod?'Modifier':'Ajouter'} un Grand Prix</h2><div class="row2">
+  ${F('gN','Numéro de la course',{type:'number',g:'id'})}${F('gCountry','Nom du Grand Prix (pays)',{g:'id'})}${F('gFlag','Drapeau (image)',{file:1,g:'id'})}<div data-g="id"></div>
+  ${F('gPoster','Affiche (image)',{file:1,g:'img'})}${F('gSponsor','Sponsor (image)',{file:1,g:'img'})}${F('gTrophy','Trophée (image)',{file:1,g:'img'})}<div data-g="img"></div>
+  ${F('gPractice','Essais (image)',{file:1,g:'rec'})}${F('gQuali','Qualifications (image)',{file:1,g:'rec'})}${F('gCircuit','Circuit (image)',{file:1,g:'rec'})}<div data-g="rec"></div>
+  ${F('gWin','Vainqueur (image)',{file:1,g:'win'})}</div><button class="sv" id="save">Enregistrer</button></section>`;
+  const fillMR=()=>{const y=+$('gy').value,l=GP[y]||[];const v=$('mRace').value;$('mRace').innerHTML=l.map(g=>`<option value="${g.n}">#${g.n} · ${g.country}</option>`).join('');if(v&&[...$('mRace').options].some(o=>o.value===v))$('mRace').value=v;prefill()};
+  function prefill(){
+    const y=+$('gy').value,g=(GP[y]||[]).find(x=>x.n===+$('mRace').value);if(!g)return;const r=(RC[y]||{})[g.n]||[];
+    $('gN').value=g.n;$('gN').disabled=true;$('gCountry').value=g.country||'';
+    curImg('gFlag',g.flag);curImg('gPoster',g.poster);curImg('gSponsor',g.sponsor);curImg('gTrophy',g.trophy);curImg('gWin',g.winner);
+    curImg('gPractice',r[1]);curImg('gQuali',r[4]);curImg('gCircuit',r[0]);
+  }
+  if(mod){$('gy').onchange=fillMR;$('mRace').onchange=prefill;fillMR()}
+  if($('grp'))$('grp').onchange=applyGrp;applyGrp();
+  $('save').onclick=e=>run(e.target,async()=>{
+    const y=mod?+$('gy').value:yearOf('g'),n=mod?+$('mRace').value:parseInt($('gN').value);
+    if(!(n>0))throw new Error('Indiquez le numéro de la course.');
+    const id='gp-'+y+'-'+n,old=EXTRA.find(x=>x.id===id)||{},cur=(GP[y]||[]).find(x=>x.n===n);
+    const country=$('gCountry').value.trim()||old.country||(cur&&cur.country)||'';if(!country)throw new Error('Indiquez le nom du Grand Prix.');
+    const u=async(i,m,k)=>(await upImg($(i).files[0],m))||old[k]||null;
+    await DB.doc('extra/'+id).set({kind:'gp',year:y,n,country,flag:await u('gFlag',200,'flag'),poster:await u('gPoster',700,'poster'),sponsor:await u('gSponsor',300,'sponsor'),
+      trophy:await u('gTrophy',300,'trophy'),winner:await u('gWin',600,'winner'),practice:await u('gPractice',600,'practice'),qualifying:await u('gQuali',600,'qualifying'),circuit:await u('gCircuit',600,'circuit')});
+    LASTY=y;
+    if(!mod){['gN','gCountry','gFlag','gPoster','gSponsor','gTrophy','gWin','gPractice','gQuali','gCircuit'].forEach(i=>$(i).value='');$('gny').value=''}else prefill();
+  });
+}
+
+/* ---------- Onglet 3 : casques et livrées spéciaux ---------- */
+const numberFor=(name,y)=>{
+  const d=drivers[slug(name)],s=d&&d.seasons.find(x=>x.year===y);
+  if(s&&s.number){const m=String(s.number).match(/\d+/);if(m)return m[0]}
+  for(const n in NUM)if(NUM[n].some(b=>slug(b.name)===slug(name)))return n;
+  return '';
+};
+function spGroups(t,name,y){
+  const out=[],k=slug(name),hid=new Set(EXTRA.filter(e=>e.kind==='hide'&&e.t===t&&slug(e.name)===k&&e.year===y).map(e=>(e.n||'')+'|'+e.gi));
+  if(t==='driver'){
+    for(const n in BASE_NUM)BASE_NUM[n].forEach(b=>{if(slug(b.name)!==k)return;b.years.forEach(r=>{if(r.y!==y)return;r.s.forEach((g,gi)=>{if(hid.has(n+'|'+gi))return;out.push({src:'base',t,n,gi,name:b.name,year:y,imgs:[g.f,...g.h].filter(Boolean)})})})});
+  }else{
+    const key=Object.keys(BASE_EC).find(n=>slug(n)===k),r=key&&BASE_EC[key][y];
+    (r?r.x:[]).forEach((g,gi)=>{if(hid.has('|'+gi))return;out.push({src:'base',t,gi,name:key,year:y,imgs:[g.f,...g.l].filter(Boolean)})});
+  }
+  EXTRA.filter(e=>e.kind==='special'&&e.t===t&&slug(e.name)===k&&e.year===y).forEach(e=>out.push({src:'extra',id:e.id,t,name:e.name,year:y,number:e.number,imgs:[e.flag,...(e.imgs||[])].filter(Boolean).map(blob)}));
+  return out;
+}
+async function removeGroup(g){
+  if(g.src==='extra'){const e=EXTRA.find(x=>x.id===g.id);await DB.doc('extra/'+g.id).delete();for(const i of assetIds(e||{}))try{await AS.delete(i)}catch(_){}}
+  else await DB.doc('extra/hide-'+slug(g.name)+'-'+g.year+'-'+(g.n||'x')+'-'+g.gi).set({kind:'hide',t:g.t,name:g.name,year:g.year,n:g.n||'',gi:g.gi});
+}
+function tab3(){
+  const mod=AM==='mod',typeSel=`<div><label>Type</label><select id="sType"><option value="driver">Casque spécial d’un pilote</option><option value="team">Livrée spéciale d’une écurie</option></select></div>`;
+  if(mod){
+    $('adBody').innerHTML=`<section class="ad"><h2>Modifier un casque ou une livrée</h2><div class="row2">${typeSel}<div><label>Pilote ou écurie</label><input id="sName" list="dlD"></div></div>${YS('s',false)}<button class="sv" id="show">Afficher</button><div id="sList" style="margin-top:14px"></div></section>`;
+    $('sType').onchange=()=>$('sName').setAttribute('list',$('sType').value==='driver'?'dlD':'dlT');
+    const show=()=>{
+      const g=spGroups($('sType').value,$('sName').value.trim(),+$('sy').value);
+      $('sList').innerHTML=g.length?g.map((x,i)=>`<div class="adi">${x.imgs.map(s=>`<img src="${s}" alt="">`).join('')}<div class="grow">${x.src==='extra'?'Ajouté par vous':'Du fichier d’origine'}${x.n?' · #'+x.n:''}</div><button data-r="${i}">Remplacer</button><button data-d="${i}">Supprimer</button></div>`).join(''):'<p class="sub">Aucun élément trouvé pour cette saison. Vérifiez le nom, ou utilisez « Ajouter ».</p>';
+      $$('[data-d]',$('sList')).forEach(b=>confirmBtn(b,async()=>{try{await removeGroup(g[+b.dataset.d]);say('Supprimé.');show()}catch(e){say('Échec : '+(e.message||e.code),false)}}));
+      $$('[data-r]',$('sList')).forEach(b=>b.onclick=()=>{REPL=g[+b.dataset.r];AM='add';admin();say('Ajoutez les nouvelles images : l’ancien élément sera retiré à l’enregistrement.')});
+    };
+    $('show').onclick=show;return;
+  }
+  $('adBody').innerHTML=`<section class="ad"><h2>Ajouter un casque ou une livrée spéciale</h2><div class="row2">${typeSel}<div><label>Nom du pilote ou de l’écurie</label><input id="sName" list="dlD"></div></div><p class="sub" id="sHint"></p>
+  ${YS('s',true)}<div class="row2" style="margin-top:6px"><div id="sNumW"><label>Numéro du pilote (obligatoire si le pilote est nouveau)</label><input id="sNum"></div>${F('sFlag','Drapeau du Grand Prix (facultatif)',{file:1})}</div>
+  <div class="f"><label>Images du ou des casques / livrées (plusieurs possibles)</label><input id="sImgs" type="file" accept="image/*" multiple></div><button class="sv" id="save">Enregistrer</button></section>`;
+  const hint=()=>{
+    const t=$('sType').value,raw=$('sName').value.trim();$('sNumW').style.display=t==='driver'?'':'none';$('sName').setAttribute('list',t==='driver'?'dlD':'dlT');
+    if(!raw){$('sHint').textContent='';return}
+    const known=t==='driver'?drivers[slug(raw)]&&!drivers[slug(raw)].pseudo:Object.values(teams).some(x=>slug(x.name)===slug(raw));
+    $('sHint').textContent=known?(t==='driver'?'Pilote connu : le casque sera ajouté automatiquement à sa fiche.':'Écurie connue : la livrée sera ajoutée automatiquement à sa fiche.'):(t==='driver'?'Nouveau pilote : une fiche pilote et un numéro seront créés. Indiquez son numéro.':'Nouvelle écurie : elle sera créée pour cette saison, avec cette livrée.');
+  };
+  $('sType').onchange=hint;$('sName').oninput=hint;
+  if(REPL){$('sType').value=REPL.t;$('sName').value=nice(REPL.name);$('sy').value=REPL.year;if(REPL.n)$('sNum').value=REPL.n;if(REPL.number)$('sNum').value=REPL.number}
+  hint();
+  $('save').onclick=e=>run(e.target,async()=>{
+    const t=$('sType').value,raw=$('sName').value.trim(),y=yearOf('s'),files=[...$('sImgs').files];
+    if(!raw||!files.length)throw new Error('Indiquez le nom et choisissez au moins une image.');
+    let name,number='';
+    if(t==='driver'){
+      const k=drivers[slug(raw)];name=k?k.name:fmtName(raw);number=$('sNum').value.replace('#','').trim()||numberFor(name,y);
+      if(!/^\d{1,3}$/.test(number))throw new Error('Pilote nouveau ou numéro introuvable : indiquez le numéro (chiffres).');
+    }else{const k=Object.values(teams).find(x=>slug(x.name)===slug(raw));name=k?k.name:raw}
+    const imgs=[];for(const f of files)imgs.push(await upImg(f,400));
+    await DB.doc('extra/sp-'+slug(name)+'-'+y+'-'+Date.now().toString(36)).set({kind:'special',t,name,year:y,number,flag:await upImg($('sFlag').files[0],100),imgs});
+    if(REPL){const g=REPL;REPL=null;await removeGroup(g)}
+    LASTY=y;['sName','sNum','sFlag','sImgs','any'].forEach(i=>{if($(i))$(i).value=''});$('sny').value='';hint();
+  });
+}
+
+/* ---------- Historique ---------- */
+function adminList(){
+  const L=$('adList');if(!L)return;
+  const lab=e=>({team:`Écurie ${e.year} · ${e.name}`,gp:`Grand Prix ${e.year} · #${e.n} ${e.country||''}`,
+    special:`${e.t==='team'?'Livrée spéciale':'Casque spécial'} ${e.year} · ${nice(e.name||'')}`,hide:`Élément retiré (${e.t==='team'?'livrée':'casque'}) ${e.year} · ${nice(e.name||'')}`,driver:`Pilote ${e.year} · ${nice(e.name||'')}`}[e.kind]||e.id);
+  L.innerHTML=EXTRA.length?[...EXTRA].sort((a,b)=>(b.year||0)-(a.year||0)||a.id.localeCompare(b.id)).map(e=>{
+    const imgs=assetIds(e).slice(0,4).map(i=>`<img src="${blob(i)}" alt="">`).join('');
+    return `<div class="adi">${imgs}<div class="grow">${lab(e)}</div><button data-del="${e.id}">${e.kind==='hide'?'Restaurer':'Supprimer'}</button></div>`}).join(''):'<p class="sub">Aucun ajout pour le moment.</p>';
+  $$('[data-del]',L).forEach(b=>confirmBtn(b,async()=>{
+    const e=EXTRA.find(x=>x.id===b.dataset.del);if(!e)return;
+    try{await DB.doc('extra/'+e.id).delete();for(const i of assetIds(e))try{await AS.delete(i)}catch(_){}say(e.kind==='hide'?'Élément restauré.':'Supprimé.')}catch(x){say('Échec : '+(x.message||x.code),false)}
+  }));
+}
+function listDrivers(){
+  const l=Object.entries(drivers).sort((a,b)=>a[1].name.split(' ').slice(-1)[0].localeCompare(b[1].name.split(' ').slice(-1)[0]));
+  app.innerHTML=`<h1>Pilotes</h1><p class="sub">${l.length} pilotes</p><div class="grid">${l.map(([k,d])=>{const s=d.seasons.sort((a,b)=>b.year-a.year)[0]||{};return `<a class="card" href="#driver-${k}"><img src="${s.photo||''}" loading="lazy" alt=""><div class="n">${nice(d.name)}</div><div class="m">${d.seasons.length} saison(s)</div></a>`}).join('')}</div>`;
+}
+function listTeams(){
+  const l=Object.entries(teams).sort((a,b)=>a[1].name.localeCompare(b[1].name));
+  app.innerHTML=`<h1>Écuries</h1><p class="sub">${l.length} écuries</p><div class="grid">${l.map(([k,t])=>{const s=t.seasons.sort((a,b)=>b.year-a.year)[0];return `<a class="card" href="#team-${k}"><img src="${s.logo}" loading="lazy" alt=""><div class="n">${t.name}</div><div class="m">${t.seasons.length} saison(s)</div></a>`}).join('')}</div>`;
+}
+$('q').addEventListener('input',e=>{
+  const v=slug(e.target.value);if(!v)return route();
+  const dr=Object.entries(drivers).filter(([k])=>k.includes(v)),tm=Object.entries(teams).filter(([k])=>k.includes(v));
+  app.innerHTML=`<h1>Résultats</h1><div class="grid">`+
+   dr.map(([k,d])=>`<a class="card" href="#driver-${k}"><img src="${(d.seasons[0]||{}).photo||''}" alt=""><div class="n">${nice(d.name)}</div><div class="m">Pilote</div></a>`).join('')+
+   tm.map(([k,t])=>`<a class="card" href="#team-${k}"><img src="${t.seasons[0].logo}" alt=""><div class="n">${t.name}</div><div class="m">Écurie</div></a>`).join('')+`</div>`;
+});
+</script>
+</body>
+</html>
