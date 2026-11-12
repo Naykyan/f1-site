@@ -452,5 +452,19 @@
   "practice": null,
   "qualifying": null,
   "circuit": null
+ },
+ "gp-2024-3": {
+  "kind": "gp",
+  "year": 2024,
+  "n": 3,
+  "country": "Australie",
+  "flag": "30beca16ebae351dab13a1eb11deccad",
+  "poster": null,
+  "sponsor": null,
+  "trophy": null,
+  "winner": null,
+  "practice": null,
+  "qualifying": null,
+  "circuit": null
  }
 }
