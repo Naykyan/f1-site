@@ -407,5 +407,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-cadillac-2026": {
+  "kind": "team",
+  "year": 2026,
+  "name": "Cadillac",
+  "chassis": "MAC-26",
+  "engine": "Ferrari",
+  "logo": null,
+  "car": "974ec5dfe2c5cc543912f685e1309005",
+  "shirt": null,
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Valtteri BOTTAS",
+    "from": "Valtteri BOTTAS",
+    "number": "#77",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Sergio PEREZ",
+    "from": "Sergio PEREZ",
+    "number": "#11",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
