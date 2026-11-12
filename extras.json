@@ -314,5 +314,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-aston-martin-2026": {
+  "kind": "team",
+  "year": 2026,
+  "name": "Aston Martin",
+  "chassis": "AMR26",
+  "engine": "Honda",
+  "logo": null,
+  "car": "a1a6ab6962f5b6470d489a5cb806d8eb",
+  "shirt": null,
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Lance STROLL",
+    "from": "Lance STROLL",
+    "number": "#18",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Fernando ALONSO",
+    "from": "Fernando ALONSO",
+    "number": "#14",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
