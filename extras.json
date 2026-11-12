@@ -522,5 +522,19 @@
   "practice": null,
   "qualifying": null,
   "circuit": null
+ },
+ "gp-2024-5": {
+  "kind": "gp",
+  "year": 2024,
+  "n": 5,
+  "country": "Chine",
+  "flag": "f3401583e041d71bf29f1d72c4bd83b1",
+  "poster": null,
+  "sponsor": null,
+  "trophy": null,
+  "winner": null,
+  "practice": null,
+  "qualifying": null,
+  "circuit": null
  }
 }
