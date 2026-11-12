@@ -494,5 +494,19 @@
   "practice": null,
   "qualifying": null,
   "circuit": null
+ },
+ "gp-2026-2": {
+  "kind": "gp",
+  "year": 2026,
+  "n": 2,
+  "country": "Chine",
+  "flag": "f2bb815a0d07bace2cf05be7e60c31ef",
+  "poster": null,
+  "sponsor": null,
+  "trophy": null,
+  "winner": null,
+  "practice": null,
+  "qualifying": null,
+  "circuit": null
  }
 }
