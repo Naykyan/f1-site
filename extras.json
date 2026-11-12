@@ -438,5 +438,19 @@
     "numImg": null
    }
   ]
+ },
+ "gp-2025-1": {
+  "kind": "gp",
+  "year": 2025,
+  "n": 1,
+  "country": "Australie",
+  "flag": "75d612dff500fef64fa98f66067366ae",
+  "poster": null,
+  "sponsor": null,
+  "trophy": null,
+  "winner": null,
+  "practice": null,
+  "qualifying": null,
+  "circuit": null
  }
 }
