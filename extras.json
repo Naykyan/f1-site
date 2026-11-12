@@ -252,5 +252,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-haas-2026": {
+  "kind": "team",
+  "year": 2026,
+  "name": "Haas",
+  "chassis": "VF-26",
+  "engine": "Ferrari",
+  "logo": null,
+  "car": "364f95ccad6bdf48eb693906310c0798",
+  "shirt": null,
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Esteban OCON",
+    "from": "Esteban OCON",
+    "number": "#31",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Oliver BEARMAN",
+    "from": "Oliver BEARMAN",
+    "number": "#87",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
