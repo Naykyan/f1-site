@@ -345,5 +345,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-racing-bulls-2026": {
+  "kind": "team",
+  "year": 2026,
+  "name": "Racing Bulls",
+  "chassis": "VCARB03",
+  "engine": "Ford",
+  "logo": null,
+  "car": "b57b16d48080e37d6a662542034d1410",
+  "shirt": null,
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Liam LAWSON",
+    "from": "Liam LAWSON",
+    "number": "#30",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Arvid LINDBLAD",
+    "from": "Arvid LINDBLAD",
+    "number": "#41",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
