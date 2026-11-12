@@ -508,5 +508,19 @@
   "practice": null,
   "qualifying": null,
   "circuit": null
+ },
+ "gp-2025-2": {
+  "kind": "gp",
+  "year": 2025,
+  "n": 2,
+  "country": "Chine",
+  "flag": "3f2ef1a9c25a767fd5faa8c5916bca7a",
+  "poster": null,
+  "sponsor": null,
+  "trophy": null,
+  "winner": null,
+  "practice": null,
+  "qualifying": null,
+  "circuit": null
  }
 }
