@@ -438,5 +438,19 @@
   "practice": null,
   "qualifying": null,
   "circuit": null
+ },
+ "gp-2026-1": {
+  "kind": "gp",
+  "year": 2026,
+  "n": 1,
+  "country": "Australie",
+  "flag": "48400385e4bd4cee1b7b790f155c0c67",
+  "poster": null,
+  "sponsor": null,
+  "trophy": null,
+  "winner": null,
+  "practice": null,
+  "qualifying": null,
+  "circuit": null
  }
 }
