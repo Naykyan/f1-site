@@ -221,5 +221,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-mercedes-2026": {
+  "kind": "team",
+  "year": 2026,
+  "name": "Mercedes",
+  "chassis": "W17",
+  "engine": "Mercedes",
+  "logo": null,
+  "car": "735bc68d63317e748e84b04c9c475423",
+  "shirt": null,
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "George RUSSELL",
+    "from": "George RUSSELL",
+    "number": "#63",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Kimi ANTONELLI",
+    "from": "Kimi ANTONELLI",
+    "number": "#12",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
