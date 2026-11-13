@@ -3244,5 +3244,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-mclaren-2019": {
+  "kind": "team",
+  "year": 2019,
+  "name": "McLaren",
+  "chassis": "MCL34",
+  "engine": "Renault",
+  "logo": null,
+  "car": null,
+  "shirt": "25ec22cd20dd0583a45fccedf614a18d",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Lando NORRIS",
+    "from": "Lando NORRIS",
+    "number": "#4",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Carlos SAINZ",
+    "from": "Carlos SAINZ",
+    "number": "#55",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
