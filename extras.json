@@ -631,5 +631,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-ferrari-2022": {
+  "kind": "team",
+  "year": 2022,
+  "name": "Ferrari",
+  "chassis": "SF-75",
+  "engine": "Ferrari",
+  "logo": null,
+  "car": null,
+  "shirt": "125fa2651929264a52289e7dd4046cac",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Charles LECLERC",
+    "from": "Charles LECLERC",
+    "number": "#16",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Carlos SAINZ",
+    "from": "Carlos SAINZ",
+    "number": "#55",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
