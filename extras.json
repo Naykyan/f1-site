@@ -2217,5 +2217,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-alfa-romeo-2022": {
+  "kind": "team",
+  "year": 2022,
+  "name": "Alfa Roméo",
+  "chassis": "C42",
+  "engine": "Ferrari",
+  "logo": null,
+  "car": null,
+  "shirt": "cde1bdc54453881beef0d29f3d691341",
+  "eng": "5765128989744916100c4312716e0fbd",
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Ghanyu ZHOU",
+    "from": "Ghanyu ZHOU",
+    "number": "#24",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Valtteri BOTTAS",
+    "from": "Valtteri BOTTAS",
+    "number": "#77",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
