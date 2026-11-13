@@ -2186,5 +2186,36 @@
    "Charles LECLERC",
    "George RUSSELL"
   ]
+ },
+ "team-alfa-romeo-2023": {
+  "kind": "team",
+  "year": 2023,
+  "name": "Alfa Roméo",
+  "chassis": "C43",
+  "engine": "Ferrari",
+  "logo": null,
+  "car": null,
+  "shirt": "3c16df43eb052763a68a71c35aad64f2",
+  "eng": "12b25407934cc8293262a307267d7a65",
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Ghanyu ZHOU",
+    "from": "Ghanyu ZHOU",
+    "number": "#24",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Valtteri BOTTAS",
+    "from": "Valtteri BOTTAS",
+    "number": "#77",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
