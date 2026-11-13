@@ -3213,5 +3213,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-mclaren-2020": {
+  "kind": "team",
+  "year": 2020,
+  "name": "McLaren",
+  "chassis": "MCL35",
+  "engine": "Renault",
+  "logo": null,
+  "car": null,
+  "shirt": "7084be7407d4b216cf1d2844d6ac1857",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Lando NORRIS",
+    "from": "Lando NORRIS",
+    "number": "#4",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Carlos SAINZ",
+    "from": "Carlos SAINZ",
+    "number": "#55",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
