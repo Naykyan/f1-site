@@ -1444,5 +1444,26 @@
    "Lando NORRIS",
    "Lewis HAMILTON"
   ]
+ },
+ "gp-2024-11": {
+  "kind": "gp",
+  "year": 2024,
+  "n": 11,
+  "country": "Autriche",
+  "flag": null,
+  "poster": null,
+  "sponsor": null,
+  "trophy": null,
+  "winner": null,
+  "practice": null,
+  "practice2": null,
+  "practice3": null,
+  "qualifying": null,
+  "circuit": null,
+  "podium": [
+   "George RUSSELL",
+   "Oscar PIASTRI",
+   "Carlos SAINZ"
+  ]
  }
 }
