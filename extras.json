@@ -2992,5 +2992,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-haas-2019": {
+  "kind": "team",
+  "year": 2019,
+  "name": "Haas",
+  "chassis": "VF-19",
+  "engine": "Ferrari",
+  "logo": null,
+  "car": null,
+  "shirt": "64342ccbe0ffa5bd9b5b657b49ad5d85",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Romain GROSJEAN",
+    "from": "Romain GROSJEAN",
+    "number": "#8",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Kevin MAGNUSSEN",
+    "from": "Kevin MAGNUSSEN",
+    "number": "#20",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
