@@ -1311,5 +1311,26 @@
    "Sergio PEREZ",
    "Charles LECLERC"
   ]
+ },
+ "gp-2024-4": {
+  "kind": "gp",
+  "year": 2024,
+  "n": 4,
+  "country": "Japon",
+  "flag": null,
+  "poster": null,
+  "sponsor": null,
+  "trophy": null,
+  "winner": null,
+  "practice": null,
+  "practice2": null,
+  "practice3": null,
+  "qualifying": null,
+  "circuit": null,
+  "podium": [
+   "Max VERSTAPPEN",
+   "Sergio PEREZ",
+   "Carlos SAINZ"
+  ]
  }
 }
