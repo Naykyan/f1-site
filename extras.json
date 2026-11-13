@@ -2589,5 +2589,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-alpine-2022": {
+  "kind": "team",
+  "year": 2022,
+  "name": "Alpine",
+  "chassis": "A522",
+  "engine": "Renault",
+  "logo": null,
+  "car": null,
+  "shirt": "d5c44f28fa0aa8bb68836d01d9600e28",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Esteban OCON",
+    "from": "Esteban OCON",
+    "number": "#31",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Fernando ALONSO",
+    "from": "Fernando ALONSO",
+    "number": "#14",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
