@@ -1136,5 +1136,26 @@
    "Max VERSTAPPEN",
    "Lando NORRIS"
   ]
+ },
+ "gp-2025-19": {
+  "kind": "gp",
+  "year": 2025,
+  "n": 19,
+  "country": "Etats-Unis",
+  "flag": null,
+  "poster": null,
+  "sponsor": null,
+  "trophy": null,
+  "winner": null,
+  "practice": null,
+  "practice2": null,
+  "practice3": null,
+  "qualifying": null,
+  "circuit": null,
+  "podium": [
+   "Max VERSTAPPEN",
+   "Lando NORRIS",
+   "Charles LECLERC"
+  ]
  }
 }
