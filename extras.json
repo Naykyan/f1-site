@@ -3023,5 +3023,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-haas-2018": {
+  "kind": "team",
+  "year": 2018,
+  "name": "Haas",
+  "chassis": "VF-18",
+  "engine": "Ferrari",
+  "logo": null,
+  "car": null,
+  "shirt": "8487179d97c8f6f3ca1cf56252e8a439",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Romain GROSJEAN",
+    "from": "Romain GROSJEAN",
+    "number": "#8",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Kevin MAGNUSSEN",
+    "from": "Kevin MAGNUSSEN",
+    "number": "#20",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
