@@ -557,8 +557,15 @@
   "trophy": null,
   "winner": null,
   "practice": null,
+  "practice2": null,
+  "practice3": null,
   "qualifying": null,
-  "circuit": null
+  "circuit": null,
+  "podium": [
+   "Max VERSTAPPEN",
+   "Lando NORRIS",
+   "Sergio PEREZ"
+  ]
  },
  "team-ferrari-2025": {
   "kind": "team",
