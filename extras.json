@@ -2372,5 +2372,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-alphatauri-2023": {
+  "kind": "team",
+  "year": 2023,
+  "name": "AlphaTauri",
+  "chassis": "AT04",
+  "engine": "Honda RBPT",
+  "logo": null,
+  "car": null,
+  "shirt": "de5f3162df3ed43706c5281e82380ca3",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Yuki TSUNODA",
+    "from": "Yuki TSUNODA",
+    "number": "#22",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Nick de VRIES",
+    "from": "Nick de VRIES",
+    "number": "#21",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
