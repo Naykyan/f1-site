@@ -926,5 +926,26 @@
    "Charles LECLERC",
    "Oscar PIASTRI"
   ]
+ },
+ "gp-2025-9": {
+  "kind": "gp",
+  "year": 2025,
+  "n": 9,
+  "country": "Espagne",
+  "flag": null,
+  "poster": null,
+  "sponsor": null,
+  "trophy": null,
+  "winner": null,
+  "practice": null,
+  "practice2": null,
+  "practice3": null,
+  "qualifying": null,
+  "circuit": null,
+  "podium": [
+   "Oscar PIASTRI",
+   "Lando NORRIS",
+   "Charles LECLERC"
+  ]
  }
 }
