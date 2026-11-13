@@ -1010,5 +1010,26 @@
    "Oscar PIASTRI",
    "Nico HULKENBERG"
   ]
+ },
+ "gp-2025-13": {
+  "kind": "gp",
+  "year": 2025,
+  "n": 13,
+  "country": "Belgique",
+  "flag": null,
+  "poster": null,
+  "sponsor": null,
+  "trophy": null,
+  "winner": null,
+  "practice": null,
+  "practice2": null,
+  "practice3": null,
+  "qualifying": null,
+  "circuit": null,
+  "podium": [
+   "Oscar PIASTRI",
+   "Lando NORRIS",
+   "Charles LECLERC"
+  ]
  }
 }
