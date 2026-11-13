@@ -1675,5 +1675,26 @@
    "Esteban OCON",
    "Pierre GASLY"
   ]
+ },
+ "gp-2024-22": {
+  "kind": "gp",
+  "year": 2024,
+  "n": 22,
+  "country": "Las Vegas",
+  "flag": null,
+  "poster": null,
+  "sponsor": null,
+  "trophy": null,
+  "winner": null,
+  "practice": null,
+  "practice2": null,
+  "practice3": null,
+  "qualifying": null,
+  "circuit": null,
+  "podium": [
+   "George RUSSELL",
+   "Lewis HAMILTON",
+   "Carlos SAINZ"
+  ]
  }
 }
