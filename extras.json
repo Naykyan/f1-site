@@ -1402,5 +1402,26 @@
    "Oscar PIASTRI",
    "Carlos SAINZ"
   ]
+ },
+ "gp-2024-9": {
+  "kind": "gp",
+  "year": 2024,
+  "n": 9,
+  "country": "Canada",
+  "flag": null,
+  "poster": null,
+  "sponsor": null,
+  "trophy": null,
+  "winner": null,
+  "practice": null,
+  "practice2": null,
+  "practice3": null,
+  "qualifying": null,
+  "circuit": null,
+  "podium": [
+   "Max VERSTAPPEN",
+   "Lando NORRIS",
+   "George RUSSELL"
+  ]
  }
 }
