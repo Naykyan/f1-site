@@ -1850,5 +1850,26 @@
    "Fernando ALONSO",
    "Esteban OCON"
   ]
+ },
+ "gp-2023-7": {
+  "kind": "gp",
+  "year": 2023,
+  "n": 7,
+  "country": "Espagne",
+  "flag": null,
+  "poster": null,
+  "sponsor": null,
+  "trophy": null,
+  "winner": null,
+  "practice": null,
+  "practice2": null,
+  "practice3": null,
+  "qualifying": null,
+  "circuit": null,
+  "podium": [
+   "Max VERSTAPPEN",
+   "Lewis HAMILTON",
+   "George RUSSELL"
+  ]
  }
 }
