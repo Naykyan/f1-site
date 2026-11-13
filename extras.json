@@ -1283,5 +1283,26 @@
    "Sergio PEREZ",
    "Carlos SAINZ"
   ]
+ },
+ "gp-2024-2": {
+  "kind": "gp",
+  "year": 2024,
+  "n": 2,
+  "country": "Arabie Saoudite",
+  "flag": null,
+  "poster": null,
+  "sponsor": null,
+  "trophy": null,
+  "winner": null,
+  "practice": null,
+  "practice2": null,
+  "practice3": null,
+  "qualifying": null,
+  "circuit": null,
+  "podium": [
+   "Max VERSTAPPEN",
+   "Sergio PEREZ",
+   "Charles LECLERC"
+  ]
  }
 }
