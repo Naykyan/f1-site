@@ -2744,5 +2744,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-aston-martin-2022": {
+  "kind": "team",
+  "year": 2022,
+  "name": "Aston Martin",
+  "chassis": "AMR22",
+  "engine": "Mercedes",
+  "logo": null,
+  "car": null,
+  "shirt": "87f2af4a9479101543c2340842102430",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Lance STROLL",
+    "from": "Lance STROLL",
+    "number": "#18",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Sebastian VETTEL",
+    "from": "Sebastian VETTEL",
+    "number": "#5",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
