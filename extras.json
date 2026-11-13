@@ -842,5 +842,26 @@
    "George RUSSELL",
    "Lando NORRIS"
   ]
+ },
+ "gp-2025-5": {
+  "kind": "gp",
+  "year": 2025,
+  "n": 5,
+  "country": "Arabie Saoudite",
+  "flag": null,
+  "poster": null,
+  "sponsor": null,
+  "trophy": null,
+  "winner": null,
+  "practice": null,
+  "practice2": null,
+  "practice3": null,
+  "qualifying": null,
+  "circuit": null,
+  "podium": [
+   "Oscar PIASTRI",
+   "Max VERSTAPPEN",
+   "Charles LECLERC"
+  ]
  }
 }
