@@ -538,5 +538,36 @@
   "practice": null,
   "qualifying": null,
   "circuit": null
+ },
+ "team-ferrari-2025": {
+  "kind": "team",
+  "year": 2025,
+  "name": "Ferrari",
+  "chassis": "SF-25",
+  "engine": "Ferrari",
+  "logo": null,
+  "car": null,
+  "shirt": "7db40772f1989ba0fd20eccf7e574ece",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Charles LECLERC",
+    "from": "Charles LECLERC",
+    "number": "#16",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Lewis HAMILTON",
+    "from": "Lewis HAMILTON",
+    "number": "#44",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
