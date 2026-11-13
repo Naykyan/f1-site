@@ -755,5 +755,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-ferrari-2018": {
+  "kind": "team",
+  "year": 2018,
+  "name": "Ferrari",
+  "chassis": "SF-71H",
+  "engine": "Ferrari",
+  "logo": null,
+  "car": null,
+  "shirt": "e28b52f77810276dfa9219287c49c2bb",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Sebastian VETTEL",
+    "from": "Sebastian VETTEL",
+    "number": "#5",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Kimi RAIKKONEN",
+    "from": "Kimi RAIKKONEN",
+    "number": "#7",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
