@@ -2899,5 +2899,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-haas-2022": {
+  "kind": "team",
+  "year": 2022,
+  "name": "Haas",
+  "chassis": "VF-22",
+  "engine": "Ferrari",
+  "logo": null,
+  "car": null,
+  "shirt": "3fe2f53ac113c1640d13b68d1414c668",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Mick SCHUMACHER",
+    "from": "Mick SCHUMACHER",
+    "number": "#47",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Kevin MAGNUSSEN",
+    "from": "Kevin MAGNUSSEN",
+    "number": "#20",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
