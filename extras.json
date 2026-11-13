@@ -1339,5 +1339,26 @@
    "Sergio PEREZ",
    "Carlos SAINZ"
   ]
+ },
+ "gp-2024-6": {
+  "kind": "gp",
+  "year": 2024,
+  "n": 6,
+  "country": "Miami",
+  "flag": null,
+  "poster": null,
+  "sponsor": null,
+  "trophy": null,
+  "winner": null,
+  "practice": null,
+  "practice2": null,
+  "practice3": null,
+  "qualifying": null,
+  "circuit": null,
+  "podium": [
+   "Lando NORRIS",
+   "Max VERSTAPPEN",
+   "Charles LECLERC"
+  ]
  }
 }
