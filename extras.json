@@ -693,5 +693,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-ferrari-2020": {
+  "kind": "team",
+  "year": 2020,
+  "name": "Ferrari",
+  "chassis": "SF-1000",
+  "engine": "Ferrari",
+  "logo": null,
+  "car": null,
+  "shirt": "d8d993af6bf47bbb340aa78a8d4968b2",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Sebastian VETTEL",
+    "from": "Sebastian VETTEL",
+    "number": "#5",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Charles LECLERC",
+    "from": "Charles LECLERC",
+    "number": "#16",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
