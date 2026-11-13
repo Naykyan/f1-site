@@ -2279,5 +2279,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-alfa-romeo-2020": {
+  "kind": "team",
+  "year": 2020,
+  "name": "Alfa Roméo",
+  "chassis": "C39",
+  "engine": "Ferrari",
+  "logo": null,
+  "car": null,
+  "shirt": "cc6352d3a9bde65a7fa8507c5a638230",
+  "eng": "d96861a36742abd138acf9a1efdc8e90",
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Kimi RAIKKONEN",
+    "from": "Kimi RAIKKONEN",
+    "number": "#7",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Antonio GIOVINAZZI",
+    "from": "Antonio GIOVINAZZI",
+    "number": "#99",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
