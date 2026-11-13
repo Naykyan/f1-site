@@ -2341,5 +2341,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-sauber-2018": {
+  "kind": "team",
+  "year": 2018,
+  "name": "Sauber",
+  "chassis": "C37",
+  "engine": "Ferrari",
+  "logo": null,
+  "car": null,
+  "shirt": "6d980db9e0e2ef1d9a03df7c82058d00",
+  "eng": "305ee52ab04fb1b0791fcaa874a51199",
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Marcus ERICSSON",
+    "from": "Marcus ERICSSON",
+    "number": "#9",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Charles LECLERC",
+    "from": "Charles LECLERC",
+    "number": "#16",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
