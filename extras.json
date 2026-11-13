@@ -2682,5 +2682,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-aston-martin-2024": {
+  "kind": "team",
+  "year": 2024,
+  "name": "Aston Martin",
+  "chassis": "AMR24",
+  "engine": "Mercedes",
+  "logo": null,
+  "car": null,
+  "shirt": "c0b0211f98c9f20ac8e8e7cce26cd5a0",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Lance STROLL",
+    "from": "Lance STROLL",
+    "number": "#18",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Fernando ALONSO",
+    "from": "Fernando ALONSO",
+    "number": "#14",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
