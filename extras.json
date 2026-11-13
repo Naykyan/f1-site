@@ -3151,5 +3151,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-mclaren-2022": {
+  "kind": "team",
+  "year": 2022,
+  "name": "McLaren",
+  "chassis": "MCL36",
+  "engine": "Mercedes",
+  "logo": null,
+  "car": null,
+  "shirt": "46391e85c91b6d4cd962a05adaede9bd",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Lando NORRIS",
+    "from": "Lando NORRIS",
+    "number": "#4",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Daniel RICCIARDO",
+    "from": "Daniel RICCIARDO",
+    "number": "#3",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
