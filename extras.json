@@ -2465,5 +2465,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-alphatauri-2020": {
+  "kind": "team",
+  "year": 2020,
+  "name": "AlphaTauri",
+  "chassis": "AT01",
+  "engine": "Honda",
+  "logo": null,
+  "car": null,
+  "shirt": "55b84453d86699a880234bb163cc2245",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Pierre GASLY",
+    "from": "Pierre GASLY",
+    "number": "#10",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Daniil KVYAT",
+    "from": "Daniil KVYAT",
+    "number": "#26",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
