@@ -3058,5 +3058,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-mclaren-2025": {
+  "kind": "team",
+  "year": 2025,
+  "name": "McLaren",
+  "chassis": "MCL39",
+  "engine": "Mercedes",
+  "logo": null,
+  "car": null,
+  "shirt": "7c2ac9837fea456c689393cb32399263",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Lando NORRIS",
+    "from": "Lando NORRIS",
+    "number": "#4",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Oscar PIASTRI",
+    "from": "Oscar PIASTRI",
+    "number": "#81",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
