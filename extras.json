@@ -569,5 +569,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-ferrari-2024": {
+  "kind": "team",
+  "year": 2024,
+  "name": "Ferrari",
+  "chassis": "SF-24",
+  "engine": "Ferrari",
+  "logo": null,
+  "car": null,
+  "shirt": "9f29cb7e26352bd67fe67bd2333fdc8b",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Charles LECLERC",
+    "from": "Charles LECLERC",
+    "number": "#16",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Carlos SAINZ",
+    "from": "Carlos SAINZ",
+    "number": "#55",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
