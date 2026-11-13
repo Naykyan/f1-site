@@ -2651,5 +2651,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-aston-martin-2025": {
+  "kind": "team",
+  "year": 2025,
+  "name": "Aston Martin",
+  "chassis": "AMR25",
+  "engine": "Mercedes",
+  "logo": null,
+  "car": null,
+  "shirt": "1c44d5f3a1b65dbffd71affb45e858d6",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Lance STROLL",
+    "from": "Lance STROLL",
+    "number": "#18",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Fernando ALONSO",
+    "from": "Fernando ALONSO",
+    "number": "#14",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
