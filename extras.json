@@ -2961,5 +2961,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-haas-2020": {
+  "kind": "team",
+  "year": 2020,
+  "name": "Haas",
+  "chassis": "VF-20",
+  "engine": "Ferrari",
+  "logo": null,
+  "car": null,
+  "shirt": "04f025361b286cca8b54cd60730135ef",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Romain GROSJEAN",
+    "from": "Romain GROSJEAN",
+    "number": "#8",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Kevin MAGNUSSEN",
+    "from": "Kevin MAGNUSSEN",
+    "number": "#20",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
