@@ -2868,5 +2868,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-haas-2024": {
+  "kind": "team",
+  "year": 2024,
+  "name": "Haas",
+  "chassis": "VF-24",
+  "engine": "Ferrari",
+  "logo": null,
+  "car": null,
+  "shirt": "36f02d1fc3c8786b256b6090de5fd4b8",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Nico HULKENBERG",
+    "from": "Nico HULKENBERG",
+    "number": "#27",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Kevin MAGNUSSEN",
+    "from": "Kevin MAGNUSSEN",
+    "number": "#20",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
