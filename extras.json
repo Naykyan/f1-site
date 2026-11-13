@@ -1094,5 +1094,26 @@
    "Lando NORRIS",
    "Oscar PIASTRI"
   ]
+ },
+ "gp-2025-17": {
+  "kind": "gp",
+  "year": 2025,
+  "n": 17,
+  "country": "Azerbaidjan",
+  "flag": null,
+  "poster": null,
+  "sponsor": null,
+  "trophy": null,
+  "winner": null,
+  "practice": null,
+  "practice2": null,
+  "practice3": null,
+  "qualifying": null,
+  "circuit": null,
+  "podium": [
+   "Max VERSTAPPEN",
+   "George RUSSELL",
+   "Carlos SAINZ"
+  ]
  }
 }
