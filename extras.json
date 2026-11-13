@@ -1787,5 +1787,26 @@
    "Max VERSTAPPEN",
    "Fernando ALONSO"
   ]
+ },
+ "gp-2023-4": {
+  "kind": "gp",
+  "year": 2023,
+  "n": 4,
+  "country": "Azerbaidjan",
+  "flag": null,
+  "poster": null,
+  "sponsor": null,
+  "trophy": null,
+  "winner": null,
+  "practice": null,
+  "practice2": null,
+  "practice3": null,
+  "qualifying": null,
+  "circuit": null,
+  "podium": [
+   "Sergio PEREZ",
+   "Max VERSTAPPEN",
+   "Charles LECLERC"
+  ]
  }
 }
