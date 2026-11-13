@@ -2403,5 +2403,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-alphatauri-2022": {
+  "kind": "team",
+  "year": 2022,
+  "name": "AlphaTauri",
+  "chassis": "AT03",
+  "engine": "Honda RBPT",
+  "logo": null,
+  "car": null,
+  "shirt": "46c32ec0a0e06aca10ab5f9c695883cd",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Pierre GASLY",
+    "from": "Pierre GASLY",
+    "number": "#10",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Yuki TSUNODA",
+    "from": "Yuki TSUNODA",
+    "number": "#22",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
