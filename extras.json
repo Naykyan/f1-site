@@ -2775,5 +2775,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-aston-martin-2021": {
+  "kind": "team",
+  "year": 2021,
+  "name": "Aston Martin",
+  "chassis": "AMR21",
+  "engine": "Mercedes",
+  "logo": null,
+  "car": null,
+  "shirt": "2a6aaa0546fbe68fefc3ff9575a3d5a5",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Lance STROLL",
+    "from": "Lance STROLL",
+    "number": "#18",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Sebastian VETTEL",
+    "from": "Sebastian VETTEL",
+    "number": "#5",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
