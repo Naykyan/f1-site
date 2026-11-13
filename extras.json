@@ -2123,5 +2123,26 @@
    "Lewis HAMILTON",
    "Charles LECLERC"
   ]
+ },
+ "gp-2023-20": {
+  "kind": "gp",
+  "year": 2023,
+  "n": 20,
+  "country": "Brésil",
+  "flag": null,
+  "poster": null,
+  "sponsor": null,
+  "trophy": null,
+  "winner": null,
+  "practice": null,
+  "practice2": null,
+  "practice3": null,
+  "qualifying": null,
+  "circuit": null,
+  "podium": [
+   "Max VERSTAPPEN",
+   "Lando NORRIS",
+   "Fernando ALONSO"
+  ]
  }
 }
