@@ -1052,5 +1052,26 @@
    "Oscar PIASTRI",
    "George RUSSELL"
   ]
+ },
+ "gp-2025-15": {
+  "kind": "gp",
+  "year": 2025,
+  "n": 15,
+  "country": "Pays-Bas",
+  "flag": null,
+  "poster": null,
+  "sponsor": null,
+  "trophy": null,
+  "winner": null,
+  "practice": null,
+  "practice2": null,
+  "practice3": null,
+  "qualifying": null,
+  "circuit": null,
+  "podium": [
+   "Oscar PIASTRI",
+   "Max VERSTAPPEN",
+   "Isack HADJAR"
+  ]
  }
 }
