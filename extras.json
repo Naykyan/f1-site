@@ -2310,5 +2310,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-alfa-romeo-2019": {
+  "kind": "team",
+  "year": 2019,
+  "name": "Alfa Roméo",
+  "chassis": "C38",
+  "engine": "Ferrari",
+  "logo": null,
+  "car": null,
+  "shirt": "bbeec469692d879636509bd59e5c4b73",
+  "eng": "36a0645c1278de9f91fef1d9d2cb6a30",
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Kimi RAIKKONEN",
+    "from": "Kimi RAIKKONEN",
+    "number": "#7",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Antonio GIOVINAZZI",
+    "from": "Antonio GIOVINAZZI",
+    "number": "#99",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
