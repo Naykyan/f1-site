@@ -2930,5 +2930,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-haas-2021": {
+  "kind": "team",
+  "year": 2021,
+  "name": "Haas",
+  "chassis": "VF-21",
+  "engine": "Ferrari",
+  "logo": null,
+  "car": null,
+  "shirt": "ecd4126a70946b88e51f30fe82a39ad2",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Mick SCHUMACHER",
+    "from": "Mick SCHUMACHER",
+    "number": "#47",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Nikita MAZEPIN",
+    "from": "Nikita MAZEPIN",
+    "number": "#9",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
