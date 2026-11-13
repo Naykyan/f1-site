@@ -724,5 +724,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-ferrari-2019": {
+  "kind": "team",
+  "year": 2019,
+  "name": "Ferrari",
+  "chassis": "SF-90",
+  "engine": "Ferrari",
+  "logo": null,
+  "car": null,
+  "shirt": "1488ce3e36cf753e8afdc9fb9aaba00d",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Sebastian VETTEL",
+    "from": "Sebastian VETTEL",
+    "number": "#5",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Charles LECLERC",
+    "from": "Charles LECLERC",
+    "number": "#16",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
