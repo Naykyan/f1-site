@@ -1997,5 +1997,26 @@
    "Fernando ALONSO",
    "Pierre GASLY"
   ]
+ },
+ "gp-2023-14": {
+  "kind": "gp",
+  "year": 2023,
+  "n": 14,
+  "country": "Italie",
+  "flag": null,
+  "poster": null,
+  "sponsor": null,
+  "trophy": null,
+  "winner": null,
+  "practice": null,
+  "practice2": null,
+  "practice3": null,
+  "qualifying": null,
+  "circuit": null,
+  "podium": [
+   "Max VERSTAPPEN",
+   "Sergio PEREZ",
+   "Carlos SAINZ"
+  ]
  }
 }
