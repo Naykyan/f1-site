@@ -1892,5 +1892,26 @@
    "Fernando ALONSO",
    "Lewis HAMILTON"
   ]
+ },
+ "gp-2023-9": {
+  "kind": "gp",
+  "year": 2023,
+  "n": 9,
+  "country": "Autriche",
+  "flag": null,
+  "poster": null,
+  "sponsor": null,
+  "trophy": null,
+  "winner": null,
+  "practice": null,
+  "practice2": null,
+  "practice3": null,
+  "qualifying": null,
+  "circuit": null,
+  "podium": [
+   "Max VERSTAPPEN",
+   "Charles LECLERC",
+   "Sergio PEREZ"
+  ]
  }
 }
