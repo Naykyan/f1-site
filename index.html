@@ -54,6 +54,11 @@ figcaption{color:var(--mut);font-size:14px}
 .tabs{display:flex;gap:8px;margin:12px 0;flex-wrap:wrap}.tab{background:var(--card);color:var(--tx);border:1px solid var(--bd);border-radius:999px;padding:8px 14px;cursor:pointer;font:inherit}
 .tab.on{background:var(--red);color:#fff;border-color:var(--red)}.tabs.sm .tab{padding:5px 12px;font-size:14px}
 .cur{height:36px;width:auto;vertical-align:middle;margin-right:6px;border-radius:4px}.curw{display:block;font-size:12px;color:var(--mut);margin-top:3px}.gh{margin:18px 0 0;grid-column:1/-1}
+.podl{display:flex;flex-direction:column;gap:8px}.podr{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:8px 12px;flex-wrap:wrap}
+.rk{font-weight:800;font-size:20px;width:28px;text-align:center}.podr>img{height:64px;width:52px;object-fit:contain}.pn{min-width:160px}
+.pts{display:flex;flex-wrap:wrap;gap:4px;margin-left:auto}.pt{display:flex;align-items:center;justify-content:center;width:44px;height:58px;border-radius:8px;color:#111;font-weight:700;text-decoration:none}.pt img{height:50px;width:auto;max-width:40px;object-fit:contain}
+.podc{display:flex;gap:12px;flex-wrap:wrap}.pc{display:flex;flex-direction:column;align-items:center;gap:4px;border:3px solid;border-radius:12px;padding:8px;background:var(--card);text-decoration:none;color:inherit;min-width:120px}.pc img{height:90px;width:auto;object-fit:contain}.pb{color:#111;font-weight:800;border-radius:6px;padding:0 8px}
+.lg{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:middle;margin:0 2px 0 8px}
 a.link{color:var(--red);text-decoration:none;font-weight:600}
 </style>
 </head>
@@ -98,9 +103,10 @@ function applyGP(g0,r0,ex){
     const arr=G[e.year]||(G[e.year]=[]);let g=arr.find(x=>x.n===e.n);
     if(!g){g={n:e.n,country:'',flag:null,poster:null,sponsor:null,trophy:null,winner:null};arr.push(g);arr.sort((a,b)=>a.n-b.n)}
     if(e.country)g.country=e.country;
+    if(e.podium&&e.podium.some(Boolean))g.podium=e.podium;
     for(const k of['flag','poster','sponsor','trophy','winner'])if(e[k])g[k]=blob(e[k]);
     const yr=R[e.year]||(R[e.year]={});const r=yr[e.n]||(yr[e.n]=[null,null,null,null,null,null]);
-    if(e.circuit)r[0]=blob(e.circuit);if(e.practice)r[1]=blob(e.practice);if(e.qualifying)r[4]=blob(e.qualifying);
+    if(e.circuit)r[0]=blob(e.circuit);if(e.practice)r[1]=blob(e.practice);if(e.practice2)r[2]=blob(e.practice2);if(e.practice3)r[3]=blob(e.practice3);if(e.qualifying)r[4]=blob(e.qualifying);
   });
   return[G,R];
 }
@@ -134,6 +140,7 @@ function applySp(n0,e0,ex){
   });
   return[N,E];
 }
+function injectPod(){const P=window.POD||{};for(const y in P)for(const n in P[y]){const g=((BASE_GP||{})[y]||[]).find(x=>x.n===+n);if(g)g.podium=P[y][n]}}
 function recompute(){
   DATA=applyExtra(BASE,EXTRA);
   const g=applyGP(BASE_GP,BASE_RC,EXTRA);window.GP=g[0];window.RC=g[1];
@@ -282,11 +289,30 @@ function listGP(){
   const ys=Object.keys(GP).sort((a,b)=>b-a);
   app.innerHTML=`<h1>Grands Prix</h1><p class="sub">Affiches, trophées et vainqueurs, saison par saison</p><div class="grid">${ys.map(y=>`<a class="card" href="#gp-${y}"><div class="year">${y}</div><div class="m">${GP[y].length} Grands Prix</div></a>`).join('')}</div>`;
 }
+
+const PC=['#FFD700','#C0C0C0','#A97142'],PN=['1er','2e','3e'];
+function drvPhoto(name,y){const s=DATA.find(x=>x.year===y);if(!s)return null;for(const t of s.teams)for(const d of t.drivers)if(slug(d.name)===slug(name))return d.photo;return null}
+function podRanking(y){
+  const m={};(GP[y]||[]).forEach(g=>(g.podium||[]).forEach((nm,i)=>{if(!nm)return;(m[slug(nm)]??={name:nm,t:[[],[],[]]}).t[i].push(g)}));
+  const l=Object.values(m).map(o=>({...o,total:o.t[0].length+o.t[1].length+o.t[2].length}));
+  l.sort((a,b)=>b.total-a.total||b.t[0].length-a.t[0].length||b.t[1].length-a.t[1].length||b.t[2].length-a.t[2].length||a.name.localeCompare(b.name));
+  return l;
+}
+function podHtml(y){
+  const l=podRanking(y);if(!l.length)return '';
+  const key=o=>o.total+'|'+o.t.map(a=>a.length).join('|');let rk=0,prev=null;
+  return `<h2>Classement des podiums</h2><p class="sub"><span class="lg" style="background:${PC[0]}"></span> 1er <span class="lg" style="background:${PC[1]}"></span> 2e <span class="lg" style="background:${PC[2]}"></span> 3e · classé par nombre de trophées</p><div class="podl">${l.map((o,i)=>{if(key(o)!==prev){rk=i+1;prev=key(o)}const ph=drvPhoto(o.name,y);
+    return `<div class="podr"><span class="rk">${rk}</span>${ph?`<img src="${ph}" loading="lazy" alt="">`:''}<div class="pn"><a class="link" href="#driver-${slug(o.name)}">${nice(o.name)}</a><div class="m">${o.total} trophée${o.total>1?'s':''} · ${o.t.map(a=>a.length).join(' / ')}</div></div><div class="pts">${o.t.map((arr,p)=>[...arr].sort((a,b)=>a.n-b.n).map(g=>`<a class="pt" style="background:${PC[p]}" href="#race-${y}-${g.n}" title="${g.country} · ${PN[p]}">${g.trophy?`<img src="${g.trophy}" loading="lazy" alt="">`:`<span>${g.n}</span>`}</a>`).join('')).join('')}</div></div>`}).join('')}</div>`;
+}
+function podRace(g,y){
+  const p=g.podium||[];if(!p.some(Boolean))return '';
+  return `<h2>Podium</h2><div class="podc">${p.map((nm,i)=>{if(!nm)return '';const ph=drvPhoto(nm,y);return `<a class="pc" href="#driver-${slug(nm)}" style="border-color:${PC[i]}"><span class="pb" style="background:${PC[i]}">${PN[i]}</span>${ph?`<img src="${ph}" loading="lazy" alt="">`:''}<b>${nice(nm)}</b></a>`}).join('')}</div>`;
+}
 function gpSeason(y){
   const r=GP[y];if(!r)return listGP();
-  app.innerHTML=`<h1>Grands Prix ${y}</h1><p class="sub"><a class="link" href="#podiums">← Toutes les saisons</a> · <a class="link" href="#season-${y}">Écuries et pilotes ${y}</a></p><div class="grid">${r.map(g=>`<a class="card" href="#race-${y}-${g.n}"><img src="${g.winner||g.poster||g.trophy||g.flag||''}" loading="lazy" alt=""><div class="n">${flag(g)}${g.country}</div><div class="m">Course n°${g.n}</div></a>`).join('')}</div>`;
+  app.innerHTML=`<h1>Grands Prix ${y}</h1><p class="sub"><a class="link" href="#podiums">← Toutes les saisons</a> · <a class="link" href="#season-${y}">Écuries et pilotes ${y}</a></p><div class="grid">${r.map(g=>`<a class="card" href="#race-${y}-${g.n}"><img src="${g.winner||g.poster||g.trophy||g.flag||''}" loading="lazy" alt=""><div class="n">${flag(g)}${g.country}</div><div class="m">Course n°${g.n}</div></a>`).join('')}</div>${podHtml(y)}`;
 }
-const RCL=['Circuit','Essais','Essais / Sprint','Essais / Sprint','Pole position','Vainqueur'];
+const RCL=['Circuit','Essais libres 1','Essais libres 2 / Sprint','Essais libres 3 / Sprint','Qualifications / Pole','Vainqueur'];
 function rc(y,n){
   const a=(window.RC[y]||{})[n];if(!a||!a.some(Boolean))return '';
   return `<h2>Récap du week-end</h2><div class="pair">${a.map((s,i)=>s?`<figure><img src="${s}" loading="lazy" alt=""><figcaption>${RCL[i]}</figcaption></figure>`:'').join('')}</div>`;
@@ -294,7 +320,7 @@ function rc(y,n){
 function race(k){
   const [y,n]=k.split('-').map(Number),g=(GP[y]||[]).find(x=>x.n===n);if(!g)return listGP();
   const fig=(s,c)=>s?`<figure><img src="${s}" alt="">${'<figcaption>'+c+'</figcaption>'}</figure>`:'';
-  app.innerHTML=`<h1>${flag(g)}Grand Prix ${g.country} ${y}</h1><p class="sub"><a class="link" href="#gp-${y}">← Grands Prix ${y}</a> · course n°${n}</p><div class="pair">${fig(g.poster,'Affiche')}${fig(g.winner,'Vainqueur')}${fig(g.trophy,'Trophée')}${fig(g.sponsor,'Sponsor')}</div>${rc(y,n)}`;
+  app.innerHTML=`<h1>${flag(g)}Grand Prix ${g.country} ${y}</h1><p class="sub"><a class="link" href="#gp-${y}">← Grands Prix ${y}</a> · course n°${n}</p><div class="pair">${fig(g.poster,'Affiche')}${fig(g.winner,'Vainqueur')}${fig(g.trophy,'Trophée')}${fig(g.sponsor,'Sponsor')}</div>${podRace(g,y)}${rc(y,n)}`;
 }
 
 function say(t,ok=true){const m=$('adMsg');if(!m)return;m.hidden=false;m.textContent=t;m.className=ok?'ok':'err'}
@@ -388,33 +414,44 @@ function tab1(){
 }
 
 /* ---------- Onglet 2 : Grands Prix ---------- */
+const podNames=y=>{const s=DATA.find(x=>x.year===y),l=s?s.teams.flatMap(t=>t.drivers.map(d=>d.name)):knownDrv();return [...new Set(l)].sort((p,q)=>p.split(' ').slice(-1)[0].localeCompare(q.split(' ').slice(-1)[0]))};
+const SEL=(id,label,g)=>`<div class="f" data-g="${g}"><label>${label}</label><select id="${id}"></select></div>`;
 function tab2(){
   const mod=AM==='mod';
-  $('adBody').innerHTML=`<section class="ad">${YS('g',!mod)}${mod?`<div class="row2"><div><label>Grand Prix à modifier</label><select id="mRace"></select></div>${GS([['all','Tout'],['id','Nom, numéro et drapeau'],['img','Affiche, sponsor et trophée'],['rec','Essais, qualifications et circuit'],['win','Vainqueur']])}</div>`:''}</section>
+  $('adBody').innerHTML=`<section class="ad">${YS('g',!mod)}${mod?`<div class="row2"><div><label>Grand Prix à modifier</label><select id="mRace"></select></div>${GS([['all','Tout'],['id','Nom, numéro et drapeau'],['img','Affiche, sponsor et trophée'],['rec','Essais, qualifications et circuit'],['win','Vainqueur'],['pod','Podium (1er, 2e, 3e)']])}</div>`:''}</section>
   <section class="ad"><h2>${mod?'Modifier':'Ajouter'} un Grand Prix</h2><div class="row2">
   ${F('gN','Numéro de la course',{type:'number',g:'id'})}${F('gCountry','Nom du Grand Prix (pays)',{g:'id'})}${F('gFlag','Drapeau (image)',{file:1,g:'id'})}<div data-g="id"></div>
   ${F('gPoster','Affiche (image)',{file:1,g:'img'})}${F('gSponsor','Sponsor (image)',{file:1,g:'img'})}${F('gTrophy','Trophée (image)',{file:1,g:'img'})}<div data-g="img"></div>
-  ${F('gPractice','Essais (image)',{file:1,g:'rec'})}${F('gQuali','Qualifications (image)',{file:1,g:'rec'})}${F('gCircuit','Circuit (image)',{file:1,g:'rec'})}<div data-g="rec"></div>
-  ${F('gWin','Vainqueur (image)',{file:1,g:'win'})}</div><button class="sv" id="save">Enregistrer</button></section>`;
-  const fillMR=()=>{const y=+$('gy').value,l=GP[y]||[];const v=$('mRace').value;$('mRace').innerHTML=l.map(g=>`<option value="${g.n}">#${g.n} · ${g.country}</option>`).join('');if(v&&[...$('mRace').options].some(o=>o.value===v))$('mRace').value=v;prefill()};
+  ${F('gPractice','Essais libres 1 (image)',{file:1,g:'rec'})}${F('gPractice2','Essais libres 2 (image)',{file:1,g:'rec'})}${F('gPractice3','Essais libres 3 (image)',{file:1,g:'rec'})}${F('gQuali','Qualifications (image)',{file:1,g:'rec'})}${F('gCircuit','Circuit (image)',{file:1,g:'rec'})}<div data-g="rec"></div>
+  ${F('gWin','Vainqueur (image)',{file:1,g:'win'})}<div data-g="win"></div>
+  <h3 class="gh" data-g="pod">Podium</h3>${SEL('gP1','1er','pod')}${SEL('gP2','2e','pod')}${SEL('gP3','3e','pod')}</div>
+  <p class="sub" data-g="pod">La photo du pilote pour cette saison et le trophée de ce Grand Prix sont ajoutés automatiquement au classement des podiums.</p>
+  <button class="sv" id="save">Enregistrer</button></section>`;
+  const fillPod=()=>{const y=mod?+$('gy').value:yearOf('g'),l=podNames(y);['gP1','gP2','gP3'].forEach(id=>{const v=$(id).value;$(id).innerHTML='<option value="">—</option>'+l.map(n=>`<option value="${n}">${nice(n)}</option>`).join('');if(v&&l.includes(v))$(id).value=v})};
+  const fillMR=()=>{const y=+$('gy').value,l=GP[y]||[];const v=$('mRace').value;$('mRace').innerHTML=l.map(g=>`<option value="${g.n}">#${g.n} · ${g.country}</option>`).join('');if(v&&[...$('mRace').options].some(o=>o.value===v))$('mRace').value=v;fillPod();prefill()};
   function prefill(){
     const y=+$('gy').value,g=(GP[y]||[]).find(x=>x.n===+$('mRace').value);if(!g)return;const r=(RC[y]||{})[g.n]||[];
     $('gN').value=g.n;$('gN').disabled=true;$('gCountry').value=g.country||'';
     curImg('gFlag',g.flag);curImg('gPoster',g.poster);curImg('gSponsor',g.sponsor);curImg('gTrophy',g.trophy);curImg('gWin',g.winner);
-    curImg('gPractice',r[1]);curImg('gQuali',r[4]);curImg('gCircuit',r[0]);
+    curImg('gPractice',r[1]);curImg('gPractice2',r[2]);curImg('gPractice3',r[3]);curImg('gQuali',r[4]);curImg('gCircuit',r[0]);
+    const pd=g.podium||[];['gP1','gP2','gP3'].forEach((id,i)=>{$(id).value=pd[i]||''});
   }
-  if(mod){$('gy').onchange=fillMR;$('mRace').onchange=prefill;fillMR()}
+  fillPod();
+  if(mod){$('gy').onchange=fillMR;$('mRace').onchange=prefill;fillMR()}else{$('gy').addEventListener('change',fillPod);$('gny').addEventListener('input',fillPod)}
   if($('grp'))$('grp').onchange=applyGrp;applyGrp();
   $('save').onclick=e=>run(e.target,async()=>{
     const y=mod?+$('gy').value:yearOf('g'),n=mod?+$('mRace').value:parseInt($('gN').value);
     if(!(n>0))throw new Error('Indiquez le numéro de la course.');
     const id='gp-'+y+'-'+n,old=EXTRA.find(x=>x.id===id)||{},cur=(GP[y]||[]).find(x=>x.n===n);
     const country=$('gCountry').value.trim()||old.country||(cur&&cur.country)||'';if(!country)throw new Error('Indiquez le nom du Grand Prix.');
+    const pod=['gP1','gP2','gP3'].map(i=>$(i).value),pf=pod.filter(Boolean);
+    if(new Set(pf).size!==pf.length)throw new Error('Un pilote ne peut pas figurer deux fois sur le podium.');
     const u=async(i,m,k)=>(await upImg($(i).files[0],m))||old[k]||null;
     await DB.doc('extra/'+id).set({kind:'gp',year:y,n,country,flag:await u('gFlag',200,'flag'),poster:await u('gPoster',700,'poster'),sponsor:await u('gSponsor',300,'sponsor'),
-      trophy:await u('gTrophy',300,'trophy'),winner:await u('gWin',600,'winner'),practice:await u('gPractice',600,'practice'),qualifying:await u('gQuali',600,'qualifying'),circuit:await u('gCircuit',600,'circuit')});
+      trophy:await u('gTrophy',300,'trophy'),winner:await u('gWin',600,'winner'),practice:await u('gPractice',600,'practice'),practice2:await u('gPractice2',600,'practice2'),practice3:await u('gPractice3',600,'practice3'),
+      qualifying:await u('gQuali',600,'qualifying'),circuit:await u('gCircuit',600,'circuit'),podium:pf.length?pod:(old.podium||null)});
     LASTY=y;
-    if(!mod){['gN','gCountry','gFlag','gPoster','gSponsor','gTrophy','gWin','gPractice','gQuali','gCircuit'].forEach(i=>$(i).value='');$('gny').value=''}else prefill();
+    if(!mod){['gN','gCountry','gFlag','gPoster','gSponsor','gTrophy','gWin','gPractice','gPractice2','gPractice3','gQuali','gCircuit'].forEach(i=>$(i).value='');$('gny').value='';['gP1','gP2','gP3'].forEach(i=>$(i).value='')}else prefill();
   });
 }
 
