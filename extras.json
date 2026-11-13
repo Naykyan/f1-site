@@ -2144,5 +2144,26 @@
    "Lando NORRIS",
    "Fernando ALONSO"
   ]
+ },
+ "gp-2023-21": {
+  "kind": "gp",
+  "year": 2023,
+  "n": 21,
+  "country": "Las Vegas",
+  "flag": null,
+  "poster": null,
+  "sponsor": null,
+  "trophy": null,
+  "winner": null,
+  "practice": null,
+  "practice2": null,
+  "practice3": null,
+  "qualifying": null,
+  "circuit": null,
+  "podium": [
+   "Max VERSTAPPEN",
+   "Charles LECLERC",
+   "Sergio PEREZ"
+  ]
  }
 }
