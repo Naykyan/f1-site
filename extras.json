@@ -989,5 +989,26 @@
    "Oscar PIASTRI",
    "Charles LECLERC"
   ]
+ },
+ "gp-2025-12": {
+  "kind": "gp",
+  "year": 2025,
+  "n": 12,
+  "country": "Grande-Bretagne",
+  "flag": null,
+  "poster": null,
+  "sponsor": null,
+  "trophy": null,
+  "winner": null,
+  "practice": null,
+  "practice2": null,
+  "practice3": null,
+  "qualifying": null,
+  "circuit": null,
+  "podium": [
+   "Lando NORRIS",
+   "Oscar PIASTRI",
+   "Nico HULKENBERG"
+  ]
  }
 }
