@@ -2713,5 +2713,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-aston-martin-2023": {
+  "kind": "team",
+  "year": 2023,
+  "name": "Aston Martin",
+  "chassis": "AMR23",
+  "engine": "Mercedes",
+  "logo": null,
+  "car": null,
+  "shirt": "7b7f56d3b77754de5fbc22aa0dad62be",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Lance STROLL",
+    "from": "Lance STROLL",
+    "number": "#18",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Fernando ALONSO",
+    "from": "Fernando ALONSO",
+    "number": "#14",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
