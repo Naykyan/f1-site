@@ -3120,5 +3120,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-mclaren-2023": {
+  "kind": "team",
+  "year": 2023,
+  "name": "McLaren",
+  "chassis": "MCL60",
+  "engine": "Mercedes",
+  "logo": null,
+  "car": null,
+  "shirt": "a5f1acf7fe7caa22ca31fd02318baefe",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Lando NORRIS",
+    "from": "Lando NORRIS",
+    "number": "#4",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Oscar PIASTRI",
+    "from": "Oscar PIASTRI",
+    "number": "#81",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
