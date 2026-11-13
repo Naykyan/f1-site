@@ -2837,5 +2837,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-haas-2025": {
+  "kind": "team",
+  "year": 2025,
+  "name": "Haas",
+  "chassis": "VF-25",
+  "engine": "Ferrari",
+  "logo": null,
+  "car": null,
+  "shirt": "f89e9c881c64a84797d3a944dfd5d5b7",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Esteban OCON",
+    "from": "Esteban OCON",
+    "number": "#31",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Oliver BEARMAN",
+    "from": "Oliver BEARMAN",
+    "number": "#87",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
