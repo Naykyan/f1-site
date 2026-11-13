@@ -1178,5 +1178,26 @@
    "Charles LECLERC",
    "Max VERSTAPPEN"
   ]
+ },
+ "gp-2025-21": {
+  "kind": "gp",
+  "year": 2025,
+  "n": 21,
+  "country": "Brésil",
+  "flag": null,
+  "poster": null,
+  "sponsor": null,
+  "trophy": null,
+  "winner": null,
+  "practice": null,
+  "practice2": null,
+  "practice3": null,
+  "qualifying": null,
+  "circuit": null,
+  "podium": [
+   "Lando NORRIS",
+   "Kimi ANTONELLI",
+   "Max VERSTAPPEN"
+  ]
  }
 }
