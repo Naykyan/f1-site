@@ -3089,5 +3089,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-mclaren-2024": {
+  "kind": "team",
+  "year": 2024,
+  "name": "McLaren",
+  "chassis": "MCL38",
+  "engine": "Mercedes",
+  "logo": null,
+  "car": null,
+  "shirt": "97245c096c19c098f2c87cdd692b3336",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Lando NORRIS",
+    "from": "Lando NORRIS",
+    "number": "#4",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Oscar PIASTRI",
+    "from": "Oscar PIASTRI",
+    "number": "#81",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
