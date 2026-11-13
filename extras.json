@@ -1808,5 +1808,26 @@
    "Max VERSTAPPEN",
    "Charles LECLERC"
   ]
+ },
+ "gp-2023-5": {
+  "kind": "gp",
+  "year": 2023,
+  "n": 5,
+  "country": "Miami",
+  "flag": null,
+  "poster": null,
+  "sponsor": null,
+  "trophy": null,
+  "winner": null,
+  "practice": null,
+  "practice2": null,
+  "practice3": null,
+  "qualifying": null,
+  "circuit": null,
+  "podium": [
+   "Max VERSTAPPEN",
+   "Sergio PEREZ",
+   "Fernando ALONSO"
+  ]
  }
 }
