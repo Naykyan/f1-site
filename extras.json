@@ -2060,5 +2060,26 @@
    "Lando NORRIS",
    "Oscar PIASTRI"
   ]
+ },
+ "gp-2023-17": {
+  "kind": "gp",
+  "year": 2023,
+  "n": 17,
+  "country": "Qatar",
+  "flag": null,
+  "poster": null,
+  "sponsor": null,
+  "trophy": null,
+  "winner": null,
+  "practice": null,
+  "practice2": null,
+  "practice3": null,
+  "qualifying": null,
+  "circuit": null,
+  "podium": [
+   "Max VERSTAPPEN",
+   "Oscar PIASTRI",
+   "Lando NORRIS"
+  ]
  }
 }
