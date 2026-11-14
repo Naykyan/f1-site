@@ -3678,5 +3678,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-red-bull-racing-2024": {
+  "kind": "team",
+  "year": 2024,
+  "name": "Red Bull Racing",
+  "chassis": "RB20",
+  "engine": "Honda RBPT",
+  "logo": null,
+  "car": null,
+  "shirt": "b32d570035b1463e0cf2f1c5ffbd6bce",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Max VERSTAPPEN",
+    "from": "Max VERSTAPPEN",
+    "number": "#1 (#33)",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Sergio PEREZ",
+    "from": "Sergio PEREZ",
+    "number": "#11",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
