@@ -4257,5 +4257,16 @@
    "Max VERSTAPPEN",
    "Isack HADJAR"
   ]
+ },
+ "sp-gabriel-bortoleto-2026-mwg9dswy": {
+  "kind": "special",
+  "t": "driver",
+  "name": "Gabriel BORTOLETO",
+  "year": 2026,
+  "number": "5",
+  "flag": "cd2d9a75f72dde01c92a149cbcb99e2a",
+  "imgs": [
+   "51e894a47111dfed75e5f2a6eb7295eb"
+  ]
  }
 }
