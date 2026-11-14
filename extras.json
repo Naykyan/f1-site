@@ -4677,27 +4677,5 @@
     "numImg": null
    }
   ]
- },
- "team-alphatauri-2026": {
-  "kind": "team",
-  "year": 2026,
-  "name": "AlphaTauri",
-  "chassis": "",
-  "engine": "",
-  "logo": null,
-  "car": null,
-  "shirt": null,
-  "eng": null,
-  "drivers": [
-   {
-    "idx": 0,
-    "name": "Oliver BEARMAN",
-    "from": "",
-    "number": "",
-    "photo": null,
-    "helmet": null,
-    "numImg": null
-   }
-  ]
  }
 }
