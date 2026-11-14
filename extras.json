@@ -4312,5 +4312,16 @@
   "imgs": [
    "909904a5f4fc96485a69428971bb0491"
   ]
+ },
+ "sp-oliver-bearman-2026-mwg9i8li": {
+  "kind": "special",
+  "t": "driver",
+  "name": "Oliver BEARMAN",
+  "year": 2026,
+  "number": "87",
+  "flag": "c37d72e6f60c63c141e4fb065938efda",
+  "imgs": [
+   "679dd77d5c1087231c57c259e1e09c79"
+  ]
  }
 }
