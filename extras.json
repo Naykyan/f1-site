@@ -4174,5 +4174,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-williams-2020": {
+  "kind": "team",
+  "year": 2020,
+  "name": "Williams",
+  "chassis": "FW43",
+  "engine": "Mercedes",
+  "logo": null,
+  "car": null,
+  "shirt": "c7b7cea018c7fc8325473993fd5b4a3d",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Nicholas LATIFI",
+    "from": "Nicholas LATIFI",
+    "number": "#6",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "George RUSSELL",
+    "from": "George RUSSELL",
+    "number": "#63",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
