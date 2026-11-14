@@ -3988,5 +3988,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-toro-rosso-2018": {
+  "kind": "team",
+  "year": 2018,
+  "name": "Toro Rosso",
+  "chassis": "STR13",
+  "engine": "Honda",
+  "logo": null,
+  "car": null,
+  "shirt": "42ab42f7a85e2c7cc8f05667ee9ca70f",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Brendon HARTLEY",
+    "from": "Brendon HARTLEY",
+    "number": "#28",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Pierre GASLY",
+    "from": "Pierre GASLY",
+    "number": "#10",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
