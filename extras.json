@@ -3616,5 +3616,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-racing-point-2019": {
+  "kind": "team",
+  "year": 2019,
+  "name": "Racing Point",
+  "chassis": "RP19",
+  "engine": "Mercedes",
+  "logo": null,
+  "car": null,
+  "shirt": "0db88894d73e3116585252a5c9e8ec53",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Sergio PEREZ",
+    "from": "Sergio PEREZ",
+    "number": "#11",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Lance STROLL",
+    "from": "Lance STROLL",
+    "number": "#18",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
