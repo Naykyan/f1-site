@@ -4677,5 +4677,26 @@
     "numImg": null
    }
   ]
+ },
+ "gp-2022-1": {
+  "kind": "gp",
+  "year": 2022,
+  "n": 1,
+  "country": "Bahrein",
+  "flag": null,
+  "poster": null,
+  "sponsor": null,
+  "trophy": null,
+  "winner": null,
+  "practice": null,
+  "practice2": null,
+  "practice3": null,
+  "qualifying": null,
+  "circuit": null,
+  "podium": [
+   "Charles LECLERC",
+   "Carlos SAINZ",
+   "Lewis HAMILTON"
+  ]
  }
 }
