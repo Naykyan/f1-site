@@ -3275,5 +3275,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-mercedes-2025": {
+  "kind": "team",
+  "year": 2025,
+  "name": "Mercedes",
+  "chassis": "W16",
+  "engine": "Mercedes",
+  "logo": null,
+  "car": null,
+  "shirt": "290fb732d607236fc5460609ab36ce36",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "George RUSSELL",
+    "from": "George RUSSELL",
+    "number": "#63",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Kimi ANTONELLI",
+    "from": "Kimi ANTONELLI",
+    "number": "#12",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
