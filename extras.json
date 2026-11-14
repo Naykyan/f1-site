@@ -4290,5 +4290,16 @@
   "imgs": [
    "1b55f6409d06eaef25a547014069cd55"
   ]
+ },
+ "sp-franco-colapinto-2026-mwg9h75a": {
+  "kind": "special",
+  "t": "driver",
+  "name": "Franco COLAPINTO",
+  "year": 2026,
+  "number": "43",
+  "flag": "9a0a5a8cac309d77c9e3dff747bf875d",
+  "imgs": [
+   "0ba7d141f6ae9ba3cc0656af1f9ab0fd"
+  ]
  }
 }
