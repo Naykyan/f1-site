@@ -4112,5 +4112,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-williams-2022": {
+  "kind": "team",
+  "year": 2022,
+  "name": "Williams",
+  "chassis": "FW44",
+  "engine": "Mercedes",
+  "logo": null,
+  "car": null,
+  "shirt": "7ae9fe3c577e419bf02743f4f7ee74aa",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Nicholas LATIFI",
+    "from": "Nicholas LATIFI",
+    "number": "#6",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Alexander ALBON",
+    "from": "Alexander ALBON",
+    "number": "#23",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
