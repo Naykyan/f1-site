@@ -3492,5 +3492,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-mercedes-2018": {
+  "kind": "team",
+  "year": 2018,
+  "name": "Mercedes",
+  "chassis": "W09",
+  "engine": "Mercedes",
+  "logo": null,
+  "car": null,
+  "shirt": "7f9947394dc52eab6365284ec4b2f216",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Lewis HAMILTON",
+    "from": "Lewis HAMILTON",
+    "number": "#44",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Valtteri BOTTAS",
+    "from": "Valtteri BOTTAS",
+    "number": "#77",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
