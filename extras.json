@@ -4301,5 +4301,16 @@
   "imgs": [
    "0ba7d141f6ae9ba3cc0656af1f9ab0fd"
   ]
+ },
+ "sp-pierre-gasly-2026-mwg9hooq": {
+  "kind": "special",
+  "t": "driver",
+  "name": "Pierre GASLY",
+  "year": 2026,
+  "number": "10",
+  "flag": "ca4f76af10ef93d2c8b1087a56563c23",
+  "imgs": [
+   "909904a5f4fc96485a69428971bb0491"
+  ]
  }
 }
