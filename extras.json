@@ -4367,5 +4367,36 @@
   "imgs": [
    "018056d4cb52603fc7775eac9e22fd7d"
   ]
+ },
+ "team-ferrari-2017": {
+  "kind": "team",
+  "year": 2017,
+  "name": "Ferrari",
+  "chassis": "SF-70H",
+  "engine": "Ferrari",
+  "logo": null,
+  "car": "aeb53805dec1a5d9b6878cc96f81e34d",
+  "shirt": null,
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Sebastian VETTEL",
+    "from": "Sebastian VETTEL",
+    "number": "#5",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Kimi RAIKKONEN",
+    "from": "Kimi RAIKKONEN",
+    "number": "#7",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
