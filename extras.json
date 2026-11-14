@@ -3430,5 +3430,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-mercedes-2020": {
+  "kind": "team",
+  "year": 2020,
+  "name": "Mercedes",
+  "chassis": "W11",
+  "engine": "Mercedes",
+  "logo": null,
+  "car": null,
+  "shirt": "39925d580eaab29c21bdfe18a1cb32bf",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Lewis HAMILTON",
+    "from": "Lewis HAMILTON",
+    "number": "#44",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Valtteri BOTTAS",
+    "from": "Valtteri BOTTAS",
+    "number": "#77",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
