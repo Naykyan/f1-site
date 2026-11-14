@@ -4334,5 +4334,16 @@
   "imgs": [
    "2dd4502597d062b92af6ae9a80773423"
   ]
+ },
+ "sp-kimi-antonelli-2026-mwg9j6ub": {
+  "kind": "special",
+  "t": "driver",
+  "name": "Kimi ANTONELLI",
+  "year": 2026,
+  "number": "12",
+  "flag": "2e32139712da0e8c7894c453f5abd8d8",
+  "imgs": [
+   "5db9c9a0c3191adb8d409e3ac80c389d"
+  ]
  }
 }
