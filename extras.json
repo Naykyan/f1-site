@@ -4243,15 +4243,19 @@
   "n": 20,
   "country": "Brésil",
   "flag": null,
-  "poster": null,
-  "sponsor": null,
+  "poster": "a261d0e43de9e1c36ad5e50b9ed2e2f0",
+  "sponsor": "c2010d8cf8e679ca9e7246f9b36af016",
   "trophy": "b2ac018d1c902db3301cd2d02495ed78",
-  "winner": null,
-  "practice": null,
-  "practice2": null,
-  "practice3": null,
-  "qualifying": null,
-  "circuit": null,
-  "podium": null
+  "winner": "3d2e5d41c24d51a87f4208c3b64c3b20",
+  "practice": "ab669e2f89de6a0cad2d745236559282",
+  "practice2": "d00763c81bf6c2b1322a1f071417e837",
+  "practice3": "036bab1112cae79e7d18762f94d4e2b0",
+  "qualifying": "e057aebccf61fc9dd94e78fc3c924293",
+  "circuit": "f5993993bd5e468e7cb3221b88941407",
+  "podium": [
+   "Lando NORRIS",
+   "Max VERSTAPPEN",
+   "Isack HADJAR"
+  ]
  }
 }
