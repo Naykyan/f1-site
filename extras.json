@@ -3771,5 +3771,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-red-bull-racing-2020": {
+  "kind": "team",
+  "year": 2020,
+  "name": "Red Bull Racing",
+  "chassis": "RB16",
+  "engine": "Honda",
+  "logo": null,
+  "car": null,
+  "shirt": "d3145ff26142a9a675653f27fc020746",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Max VERSTAPPEN",
+    "from": "Max VERSTAPPEN",
+    "number": "#33",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Alexander ALBON",
+    "from": "Alexander ALBON",
+    "number": "#23",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
