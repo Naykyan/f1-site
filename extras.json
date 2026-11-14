@@ -4873,5 +4873,26 @@
    "Sergio PEREZ",
    "Lewis HAMILTON"
   ]
+ },
+ "gp-2022-11": {
+  "kind": "gp",
+  "year": 2022,
+  "n": 11,
+  "country": "Autriche",
+  "flag": null,
+  "poster": null,
+  "sponsor": null,
+  "trophy": null,
+  "winner": null,
+  "practice": null,
+  "practice2": null,
+  "practice3": null,
+  "qualifying": null,
+  "circuit": null,
+  "podium": [
+   "Charles LECLERC",
+   "Max VERSTAPPEN",
+   "Lewis HAMILTON"
+  ]
  }
 }
