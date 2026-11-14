@@ -3926,5 +3926,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-renault-2018": {
+  "kind": "team",
+  "year": 2018,
+  "name": "Renault",
+  "chassis": "R.S.18",
+  "engine": "Renault",
+  "logo": null,
+  "car": null,
+  "shirt": "48c6aa35009bffd865549958e8b9e72b",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Nico HULKENBERG",
+    "from": "Nico HULKENBERG",
+    "number": "#27",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Carlos SAINZ",
+    "from": "Carlos SAINZ",
+    "number": "#55",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
