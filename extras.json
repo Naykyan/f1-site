@@ -3864,5 +3864,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-renault-2020": {
+  "kind": "team",
+  "year": 2020,
+  "name": "Renault",
+  "chassis": "R.S.20",
+  "engine": "Renault",
+  "logo": null,
+  "car": null,
+  "shirt": "41c8e24dc04274bf0156c76164e046ee",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Daniel RICCIARDO",
+    "from": "Daniel RICCIARDO",
+    "number": "#3",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Esteban OCON",
+    "from": "Esteban OCON",
+    "number": "#31",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
