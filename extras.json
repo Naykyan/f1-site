@@ -4356,5 +4356,16 @@
   "imgs": [
    "4946408806a5865a1fa8d9bcf6096911"
   ]
+ },
+ "sp-audi-2026-mwg9kdbj": {
+  "kind": "special",
+  "t": "team",
+  "name": "Audi",
+  "year": 2026,
+  "number": "",
+  "flag": "60b1206e751c7ea9130590cc6fb4b837",
+  "imgs": [
+   "018056d4cb52603fc7775eac9e22fd7d"
+  ]
  }
 }
