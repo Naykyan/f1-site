@@ -3368,5 +3368,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-mercedes-2022": {
+  "kind": "team",
+  "year": 2022,
+  "name": "Mercedes",
+  "chassis": "W13",
+  "engine": "Mercedes",
+  "logo": null,
+  "car": null,
+  "shirt": "c8e4d3bdef80cc23daf6835cfa17f227",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Lewis HAMILTON",
+    "from": "Lewis HAMILTON",
+    "number": "#44",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "George RUSSELL",
+    "from": "George RUSSELL",
+    "number": "#63",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
