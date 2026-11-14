@@ -3647,5 +3647,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-red-bull-racing-2025": {
+  "kind": "team",
+  "year": 2025,
+  "name": "Red Bull Racing",
+  "chassis": "RB21",
+  "engine": "Honda RBPT",
+  "logo": null,
+  "car": null,
+  "shirt": "58270a38b0fecc5567acc0f722004799",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Max VERSTAPPEN",
+    "from": "Max VERSTAPPEN",
+    "number": "#1 (#33)",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Yuki TSUNODA",
+    "from": "Yuki TSUNODA",
+    "number": "#22",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
