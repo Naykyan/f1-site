@@ -5041,5 +5041,26 @@
    "Sergio PEREZ",
    "Charles LECLERC"
   ]
+ },
+ "gp-2022-19": {
+  "kind": "gp",
+  "year": 2022,
+  "n": 19,
+  "country": "Etats-Unis",
+  "flag": null,
+  "poster": null,
+  "sponsor": null,
+  "trophy": null,
+  "winner": null,
+  "practice": null,
+  "practice2": null,
+  "practice3": null,
+  "qualifying": null,
+  "circuit": null,
+  "podium": [
+   "Max VERSTAPPEN",
+   "Lewis HAMILTON",
+   "Charles LECLERC"
+  ]
  }
 }
