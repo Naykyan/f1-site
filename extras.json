@@ -4615,5 +4615,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-haas-2017": {
+  "kind": "team",
+  "year": 2017,
+  "name": "Haas",
+  "chassis": "VF-17",
+  "engine": "Ferrari",
+  "logo": null,
+  "car": "b4ae68df03c7b1cce78e2757933af0ba",
+  "shirt": null,
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Romain GROSJEAN",
+    "from": "Romain GROSJEAN",
+    "number": "#8",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Kevin MAGNUSSEN",
+    "from": "Kevin MAGNUSSEN",
+    "number": "#20",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
