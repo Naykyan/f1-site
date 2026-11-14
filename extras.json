@@ -3585,5 +3585,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-racing-point-2020": {
+  "kind": "team",
+  "year": 2020,
+  "name": "Racing Point",
+  "chassis": "RP20",
+  "engine": "Mercedes",
+  "logo": null,
+  "car": null,
+  "shirt": "166d0085043989aff731ec4ac13e3894",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Sergio PEREZ",
+    "from": "Sergio PEREZ",
+    "number": "#11",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Lance STROLL",
+    "from": "Lance STROLL",
+    "number": "#18",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
