@@ -3554,5 +3554,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-racing-bulls-2024": {
+  "kind": "team",
+  "year": 2024,
+  "name": "Racing Bulls",
+  "chassis": "VCARB01",
+  "engine": "Honda RBPT",
+  "logo": null,
+  "car": null,
+  "shirt": "b36703f50e7b0e7717871321b7346f8f",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Yuki TSUNODA",
+    "from": "Yuki TSUNODA",
+    "number": "#22",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Daniel RICCIARDO",
+    "from": "Daniel RICCIARDO",
+    "number": "#3",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
