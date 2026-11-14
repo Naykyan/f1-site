@@ -4460,5 +4460,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-sauber-2017": {
+  "kind": "team",
+  "year": 2017,
+  "name": "Sauber",
+  "chassis": "C36",
+  "engine": "Ferrari",
+  "logo": null,
+  "car": "c756477aabb43116a5e0da91c4dac14d",
+  "shirt": null,
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Marcus ERICSSON",
+    "from": "Marcus ERICSSON",
+    "number": "#9",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Pascal WEHRLEIN",
+    "from": "Pascal WEHRLEIN",
+    "number": "#94",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
