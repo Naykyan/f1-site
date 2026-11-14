@@ -4747,5 +4747,26 @@
    "Sergio PEREZ",
    "Lando NORRIS"
   ]
+ },
+ "gp-2022-5": {
+  "kind": "gp",
+  "year": 2022,
+  "n": 5,
+  "country": "Miami",
+  "flag": null,
+  "poster": null,
+  "sponsor": null,
+  "trophy": null,
+  "winner": null,
+  "practice": null,
+  "practice2": null,
+  "practice3": null,
+  "qualifying": null,
+  "circuit": null,
+  "podium": [
+   "Max VERSTAPPEN",
+   "Charles LECLERC",
+   "Carlos SAINZ"
+  ]
  }
 }
