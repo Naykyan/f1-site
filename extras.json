@@ -4831,5 +4831,26 @@
    "Sergio PEREZ",
    "George RUSSELL"
   ]
+ },
+ "gp-2022-9": {
+  "kind": "gp",
+  "year": 2022,
+  "n": 9,
+  "country": "Canada",
+  "flag": null,
+  "poster": null,
+  "sponsor": null,
+  "trophy": null,
+  "winner": null,
+  "practice": null,
+  "practice2": null,
+  "practice3": null,
+  "qualifying": null,
+  "circuit": null,
+  "podium": [
+   "Max VERSTAPPEN",
+   "Carlos SAINZ",
+   "Lewis HAMILTON"
+  ]
  }
 }
