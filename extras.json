@@ -3337,5 +3337,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-mercedes-2023": {
+  "kind": "team",
+  "year": 2023,
+  "name": "Mercedes",
+  "chassis": "W14",
+  "engine": "Mercedes",
+  "logo": null,
+  "car": null,
+  "shirt": "8a23085a8a75b8f6702bc84d72cba3d7",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Lewis HAMILTON",
+    "from": "Lewis HAMILTON",
+    "number": "#44",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "George RUSSELL",
+    "from": "George RUSSELL",
+    "number": "#63",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
