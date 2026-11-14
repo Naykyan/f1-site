@@ -4236,5 +4236,22 @@
     "numImg": null
    }
   ]
+ },
+ "gp-2026-20": {
+  "kind": "gp",
+  "year": 2026,
+  "n": 20,
+  "country": "Brésil",
+  "flag": null,
+  "poster": null,
+  "sponsor": null,
+  "trophy": "e7cc91c76524febf89bae7199691d7f1",
+  "winner": null,
+  "practice": null,
+  "practice2": null,
+  "practice3": null,
+  "qualifying": null,
+  "circuit": null,
+  "podium": null
  }
 }
