@@ -3523,5 +3523,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-racing-bulls-2025": {
+  "kind": "team",
+  "year": 2025,
+  "name": "Racing Bulls",
+  "chassis": "VCARB02",
+  "engine": "Honda RBPT",
+  "logo": null,
+  "car": null,
+  "shirt": "5264f3123c42c3572db62559b0c13c85",
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Liam LAWSON",
+    "from": "Liam LAWSON",
+    "number": "#30",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Isack HADJAR",
+    "from": "Isack HADJAR",
+    "number": "#6",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
