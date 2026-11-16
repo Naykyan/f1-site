@@ -5156,5 +5156,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-red-bull-racing-2023": {
+  "kind": "team",
+  "year": 2023,
+  "name": "Red Bull Racing",
+  "chassis": "RB19",
+  "engine": "Honda RBPT",
+  "logo": null,
+  "car": "02e98fba8c1f08b9ca3508b5d135eb14",
+  "shirt": null,
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Max VERSTAPPEN",
+    "from": "Max VERSTAPPEN",
+    "number": "#1 (#33)",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Sergio PEREZ",
+    "from": "Sergio PEREZ",
+    "number": "#11",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
