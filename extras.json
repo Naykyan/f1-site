@@ -5187,5 +5187,36 @@
     "numImg": null
    }
   ]
+ },
+ "team-haas-2023": {
+  "kind": "team",
+  "year": 2023,
+  "name": "Haas",
+  "chassis": "VF-23",
+  "engine": "Ferrari",
+  "logo": null,
+  "car": "a3314cd76e710171148b89e97ff42403",
+  "shirt": null,
+  "eng": null,
+  "drivers": [
+   {
+    "idx": 0,
+    "name": "Nico HULKENBERG",
+    "from": "Nico HULKENBERG",
+    "number": "#27",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   },
+   {
+    "idx": 1,
+    "name": "Kevin MAGNUSSEN",
+    "from": "Kevin MAGNUSSEN",
+    "number": "#20",
+    "photo": null,
+    "helmet": null,
+    "numImg": null
+   }
+  ]
  }
 }
