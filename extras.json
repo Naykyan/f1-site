@@ -417,7 +417,7 @@
     "from": "Valtteri BOTTAS",
     "number": "#77",
     "photo": null,
-    "helmet": null,
+    "helmet": "c1e9b51be09c62ffbb659aebc1f49431",
     "numImg": null
    },
    {
@@ -426,7 +426,7 @@
     "from": "Sergio PEREZ",
     "number": "#11",
     "photo": null,
-    "helmet": null,
+    "helmet": "bcee2f4c03afda34dcd8a19a7ab2204b",
     "numImg": null
    }
   ]
