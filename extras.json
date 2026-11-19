@@ -293,7 +293,7 @@
     "from": "Pierre GASLY",
     "number": "#10",
     "photo": null,
-    "helmet": null,
+    "helmet": "bf10ffe3575c295c263ca0c8b42c3b33",
     "numImg": null
    },
    {
@@ -302,7 +302,7 @@
     "from": "Franco COLAPINTO",
     "number": "#43",
     "photo": null,
-    "helmet": null,
+    "helmet": "f295f8872ec91db22a817e509e6892b1",
     "numImg": null
    }
   ]
