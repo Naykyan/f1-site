@@ -602,7 +602,7 @@
     "from": "Charles LECLERC",
     "number": "#16",
     "photo": null,
-    "helmet": null,
+    "helmet": "a77f25af5c0916e3e6b6c6be4ee18e12",
     "numImg": null
    },
    {
@@ -611,7 +611,7 @@
     "from": "Lewis HAMILTON",
     "number": "#44",
     "photo": null,
-    "helmet": null,
+    "helmet": "730c75c39e9a1e2a0c1ac922da6f45a2",
     "numImg": null
    }
   ]
