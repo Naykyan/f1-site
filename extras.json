@@ -5299,5 +5299,16 @@
   "imgs": [
    "3a8ddd4e81fc8e0e8171962746d5d06b"
   ]
+ },
+ "sp-aston-martin-2026-mwt880ny": {
+  "kind": "special",
+  "t": "team",
+  "name": "Aston Martin",
+  "year": 2026,
+  "number": "",
+  "flag": "6f61a7a944454ce45f8aa1789a17512e",
+  "imgs": [
+   "1b9df1105dc9e747768f837e786067bb"
+  ]
  }
 }
