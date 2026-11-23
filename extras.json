@@ -5365,5 +5365,16 @@
   "imgs": [
    "a393b5c800bf1be2bef03660e92ec2ad"
   ]
+ },
+ "sp-max-verstappen-2026-mwt8c42o": {
+  "kind": "special",
+  "t": "driver",
+  "name": "Max VERSTAPPEN",
+  "year": 2026,
+  "number": "3",
+  "flag": "596be52551dd42685d4a31cb8448c3b7",
+  "imgs": [
+   "255ae253f7c3a74c26ce0a68c52434a0"
+  ]
  }
 }
