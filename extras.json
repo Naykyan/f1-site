@@ -5288,5 +5288,16 @@
    "Lewis HAMILTON",
    "Kimi ANTONELLI"
   ]
+ },
+ "sp-williams-2026-mwt8720w": {
+  "kind": "special",
+  "t": "team",
+  "name": "Williams",
+  "year": 2026,
+  "number": "",
+  "flag": "a0553d92651680c16cc407d36147fac7",
+  "imgs": [
+   "3a8ddd4e81fc8e0e8171962746d5d06b"
+  ]
  }
 }
