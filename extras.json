@@ -5409,5 +5409,16 @@
   "imgs": [
    "aca5e082100888f332aa66dae205fa0e"
   ]
+ },
+ "sp-valtteri-bottas-2026-mwt8dzvc": {
+  "kind": "special",
+  "t": "driver",
+  "name": "Valtteri BOTTAS",
+  "year": 2026,
+  "number": "77",
+  "flag": "88b0b22f5d717662ef6aac57b15c2b3c",
+  "imgs": [
+   "fea5374ba880aea60514bf63b35d206f"
+  ]
  }
 }
