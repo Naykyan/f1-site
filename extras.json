@@ -5398,5 +5398,16 @@
   "imgs": [
    "44946bc4dee59d6f57ba8e0a7f880256"
   ]
+ },
+ "sp-arvid-lindblad-2026-mwt8dl3f": {
+  "kind": "special",
+  "t": "driver",
+  "name": "Arvid LINDBLAD",
+  "year": 2026,
+  "number": "41",
+  "flag": "ac7504e67ec9b01a57f432305c9b93e9",
+  "imgs": [
+   "aca5e082100888f332aa66dae205fa0e"
+  ]
  }
 }
