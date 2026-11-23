@@ -5332,5 +5332,16 @@
   "imgs": [
    "e4306c1bf85aabe2d4a83289bba047e4"
   ]
+ },
+ "sp-lewis-hamilton-2026-mwt8ajfb": {
+  "kind": "special",
+  "t": "driver",
+  "name": "Lewis HAMILTON",
+  "year": 2026,
+  "number": "44",
+  "flag": "251deb608bff144a2620cf64dbc6504a",
+  "imgs": [
+   "90d233778fa559a231b13907a1f1e829"
+  ]
  }
 }
