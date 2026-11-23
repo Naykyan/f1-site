@@ -5354,5 +5354,16 @@
   "imgs": [
    "1fd43821769458f21e46833dc7542470"
   ]
+ },
+ "sp-oscar-piastri-2026-mwt8bo6y": {
+  "kind": "special",
+  "t": "driver",
+  "name": "Oscar PIASTRI",
+  "year": 2026,
+  "number": "81",
+  "flag": "999968b7b1d05b3adece60e1526edae1",
+  "imgs": [
+   "a393b5c800bf1be2bef03660e92ec2ad"
+  ]
  }
 }
