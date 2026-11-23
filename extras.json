@@ -5387,5 +5387,16 @@
   "imgs": [
    "aec8835ecee481f414ae046e53db1c89"
   ]
+ },
+ "sp-lance-stroll-2026-mwt8czue": {
+  "kind": "special",
+  "t": "driver",
+  "name": "Lance STROLL",
+  "year": 2026,
+  "number": "18",
+  "flag": "869016c42aead410a290b5b3470f0e4e",
+  "imgs": [
+   "44946bc4dee59d6f57ba8e0a7f880256"
+  ]
  }
 }
