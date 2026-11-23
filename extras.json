@@ -5376,5 +5376,16 @@
   "imgs": [
    "255ae253f7c3a74c26ce0a68c52434a0"
   ]
+ },
+ "sp-george-russell-2026-mwt8clv0": {
+  "kind": "special",
+  "t": "driver",
+  "name": "George RUSSELL",
+  "year": 2026,
+  "number": "63",
+  "flag": "e18f61120a8f957d1801a4afc71f27b4",
+  "imgs": [
+   "aec8835ecee481f414ae046e53db1c89"
+  ]
  }
 }
