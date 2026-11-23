@@ -5343,5 +5343,16 @@
   "imgs": [
    "90d233778fa559a231b13907a1f1e829"
   ]
+ },
+ "sp-lando-norris-2026-mwt8b44h": {
+  "kind": "special",
+  "t": "driver",
+  "name": "Lando NORRIS",
+  "year": 2026,
+  "number": "1",
+  "flag": "526cae9ccb28fdf96f9734222611abee",
+  "imgs": [
+   "1fd43821769458f21e46833dc7542470"
+  ]
  }
 }
