@@ -5310,5 +5310,16 @@
   "imgs": [
    "1b9df1105dc9e747768f837e786067bb"
   ]
+ },
+ "sp-cadillac-2026-mwt88q5l": {
+  "kind": "special",
+  "t": "team",
+  "name": "Cadillac",
+  "year": 2026,
+  "number": "",
+  "flag": "b45f405668a4235199c0a28e060f4843",
+  "imgs": [
+   "d6a97597e973cb40df01d8dd73e1e94c"
+  ]
  }
 }
