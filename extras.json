@@ -5420,5 +5420,16 @@
   "imgs": [
    "fea5374ba880aea60514bf63b35d206f"
   ]
+ },
+ "sp-sergio-perez-2026-mwt8eiio": {
+  "kind": "special",
+  "t": "driver",
+  "name": "Sergio PEREZ",
+  "year": 2026,
+  "number": "11",
+  "flag": "b77dd05cb6421e5a669fd3672596af22",
+  "imgs": [
+   "5b3f37d0b258c86f2d802623677544a9"
+  ]
  }
 }
