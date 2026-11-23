@@ -5218,5 +5218,26 @@
     "numImg": null
    }
   ]
+ },
+ "gp-2026-21": {
+  "kind": "gp",
+  "year": 2026,
+  "n": 21,
+  "country": "Las Vegas",
+  "flag": null,
+  "poster": "460275a59bab3d1948feb655670d413b",
+  "sponsor": "04a8ca2a4c3767fdc43d66c2483918e6",
+  "trophy": "eb88aff46af2024615b0a17f87e3575e",
+  "winner": "8a3dcdab1a981307797a9d3e142a2e50",
+  "practice": null,
+  "practice2": "6132f97d20e8a21fb694f1781699c33c",
+  "practice3": "4d110b8b38853056208775328633d2ac",
+  "qualifying": "512bf205d9ea779899c1f3d4d715fd0a",
+  "circuit": "fccc7d7058883216c40c093b2ec728f4",
+  "podium": [
+   "Max VERSTAPPEN",
+   "Lando NORRIS",
+   "Oscar PIASTRI"
+  ]
  }
 }
