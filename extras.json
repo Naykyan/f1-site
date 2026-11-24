@@ -3338,7 +3338,7 @@
     "from": "Lewis HAMILTON",
     "number": "#44",
     "photo": null,
-    "helmet": null,
+    "helmet": "ce35427c60ac87013ee70f46a1243d66",
     "numImg": null
    },
    {
@@ -3347,7 +3347,7 @@
     "from": "George RUSSELL",
     "number": "#63",
     "photo": null,
-    "helmet": null,
+    "helmet": "c12dc5a1681ac4c55939ff7de4b930ae",
     "numImg": null
    }
   ]
