@@ -5507,5 +5507,16 @@
   "imgs": [
    "f897d88fd6e84f7e5dbcf2b83349dd5c"
   ]
+ },
+ "sp-charles-leclerc-2025-mwwc9p0g": {
+  "kind": "special",
+  "t": "driver",
+  "name": "Charles LECLERC",
+  "year": 2025,
+  "number": "16",
+  "flag": "27ce4dd4f33692c45649d9afbabcf319",
+  "imgs": [
+   "708c56887d743835a81f0ab74af31852"
+  ]
  }
 }
