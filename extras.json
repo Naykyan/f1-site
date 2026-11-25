@@ -5518,5 +5518,13 @@
   "imgs": [
    "708c56887d743835a81f0ab74af31852"
   ]
+ },
+ "hide-charles-leclerc-2025-16-6": {
+  "kind": "hide",
+  "t": "driver",
+  "name": "Charles LECLERC",
+  "year": 2025,
+  "n": "16",
+  "gi": 6
  }
 }
