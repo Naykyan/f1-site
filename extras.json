@@ -5431,5 +5431,16 @@
   "imgs": [
    "5b3f37d0b258c86f2d802623677544a9"
   ]
+ },
+ "sp-charles-leclerc-2026-mww7d4j0": {
+  "kind": "special",
+  "t": "driver",
+  "name": "Charles LECLERC",
+  "year": 2026,
+  "number": "16",
+  "flag": null,
+  "imgs": [
+   "fee75f44d266593a6fb441d62dcf0901"
+  ]
  }
 }
