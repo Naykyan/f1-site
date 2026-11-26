@@ -5645,5 +5645,17 @@
   "items": [
    "76a0f22203e9839992b6936c1034d5f7"
   ]
+ },
+ "spe-lewis-hamilton-2026-44-0": {
+  "kind": "spedit",
+  "t": "driver",
+  "name": "Lewis HAMILTON",
+  "year": 2026,
+  "n": "44",
+  "gi": 0,
+  "flag": "base",
+  "items": [
+   "b0"
+  ]
  }
 }
