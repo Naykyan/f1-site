@@ -5609,5 +5609,17 @@
   "items": [
    "e8109da1d060ca1dd3c0dc7084cedce9"
   ]
+ },
+ "spe-lewis-hamilton-2025-44-2": {
+  "kind": "spedit",
+  "t": "driver",
+  "name": "Lewis HAMILTON",
+  "year": 2025,
+  "n": "44",
+  "gi": 2,
+  "flag": "base",
+  "items": [
+   "bb613cadaace8d0b7760c0bf54fb7cea"
+  ]
  }
 }
