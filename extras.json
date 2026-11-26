@@ -5562,5 +5562,17 @@
   "items": [
    "3c731c7c814c400a25fa3876bada1880"
   ]
+ },
+ "spe-charles-leclerc-2025-16-4": {
+  "kind": "spedit",
+  "t": "driver",
+  "name": "Charles LECLERC",
+  "year": 2025,
+  "n": "16",
+  "gi": 4,
+  "flag": "base",
+  "items": [
+   "cf52fa2723cea253effd8e5b5a6de1c2"
+  ]
  }
 }
