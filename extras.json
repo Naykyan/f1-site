@@ -5657,5 +5657,16 @@
   "items": [
    "b0"
   ]
+ },
+ "sp-lewis-hamilton-2026-mwxv657q": {
+  "kind": "special",
+  "t": "driver",
+  "name": "Lewis HAMILTON",
+  "year": 2026,
+  "number": "44",
+  "flag": "ad836447073e76369a7f8901b2a96bd5",
+  "imgs": [
+   "324733e8d503134e05a1698e2082728a"
+  ]
  }
 }
