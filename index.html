@@ -59,6 +59,7 @@ figcaption{color:var(--mut);font-size:14px}
 .pts{display:flex;flex-wrap:wrap;gap:4px;margin-left:auto}.pt{display:flex;align-items:center;justify-content:center;width:44px;height:58px;border-radius:8px;color:#111;font-weight:700;text-decoration:none}.pt img{height:50px;width:auto;max-width:40px;object-fit:contain}
 .podc{display:flex;gap:12px;flex-wrap:wrap}.pc{display:flex;flex-direction:column;align-items:center;gap:4px;border:3px solid;border-radius:12px;padding:8px;background:var(--card);text-decoration:none;color:inherit;min-width:120px}.pc img{height:90px;width:auto;object-fit:contain}.pb{color:#111;font-weight:800;border-radius:6px;padding:0 8px}
 .lg{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:middle;margin:0 2px 0 8px}
+.chk{display:flex;gap:6px;align-items:center;font-size:13px;margin-top:6px;color:var(--mut)}
 a.link{color:var(--red);text-decoration:none;font-weight:600}
 </style>
 </head>
@@ -116,6 +117,16 @@ function applySp(n0,e0,ex){
   ex.filter(e=>e.kind==='hide').forEach(h=>{
     if(h.t==='driver'){(N[h.n]||[]).forEach(b=>{if(slug(b.name)===slug(h.name))b.years.forEach(y=>{if(y.y===h.year&&y.s[h.gi])y.s[h.gi]=null})})}
     else{const k=Object.keys(E).find(n=>slug(n)===slug(h.name));const y=k&&E[k][h.year];if(y&&y.x[h.gi])y.x[h.gi]=null}
+  });
+  const rn=nm=>{let r=nm;renames(ex).forEach(([a,b])=>{if(slug(r)===slug(a))r=b});return r};
+  ex.filter(e=>e.kind==='spedit').forEach(s=>{
+    let g;
+    if(s.t==='driver'){(N[s.n]||[]).forEach(b=>{if(slug(b.name)===slug(rn(s.name)))b.years.forEach(y=>{if(y.y===s.year&&y.s[s.gi])g=y.s[s.gi]})})}
+    else{const k=Object.keys(E).find(n=>slug(n)===slug(s.name));const y=k&&E[k][s.year];if(y&&y.x[s.gi])g=y.x[s.gi]}
+    if(!g)return;
+    const key=s.t==='driver'?'h':'l',bi=(g[key]||[]).slice(),bf=g.f;
+    g.f=s.flag==='none'?null:(s.flag&&s.flag!=='base'?blob(s.flag):bf);
+    g[key]=(s.items||[]).map(t=>t.length<5?bi[+t.slice(1)]:blob(t)).filter(Boolean);
   });
   for(const n in N)N[n].forEach(b=>b.years.forEach(y=>{y.s=y.s.filter(Boolean)}));
   for(const k in E)for(const y in E[k])E[k][y].x=E[k][y].x.filter(Boolean);
@@ -463,31 +474,65 @@ const numberFor=(name,y)=>{
   return '';
 };
 function spGroups(t,name,y){
-  const out=[],k=slug(name),hid=new Set(EXTRA.filter(e=>e.kind==='hide'&&e.t===t&&slug(e.name)===k&&e.year===y).map(e=>(e.n||'')+'|'+e.gi));
+  const out=[],k=slug(name),key=t==='driver'?'h':'l';
+  const hid=new Set(EXTRA.filter(e=>e.kind==='hide'&&e.t===t&&slug(e.name)===k&&e.year===y).map(e=>(e.n||'')+'|'+e.gi));
+  const mk=(n,gi,nm,g)=>{
+    const bi=g[key]||[],e=EXTRA.find(x=>x.kind==='spedit'&&x.t===t&&slug(x.name)===k&&x.year===y&&(x.n||'')===(n||'')&&x.gi===gi);
+    const ft=e?(e.flag||'base'):(g.f?'base':'none'),its=e?(e.items||[]):bi.map((_,i)=>'b'+i);
+    const url=tk=>tk.length<5?bi[+tk.slice(1)]:blob(tk),toks=its.filter(tk=>url(tk));
+    out.push({src:'base',t,n,gi,name:nm,year:y,spedit:e&&e.id,flagTok:ft,itemToks:toks,flag:ft==='none'?null:(ft==='base'?(g.f||null):blob(ft)),items:toks.map(url)});
+  };
   if(t==='driver'){
-    for(const n in BASE_NUM)BASE_NUM[n].forEach(b=>{if(slug(b.name)!==k)return;b.years.forEach(r=>{if(r.y!==y)return;r.s.forEach((g,gi)=>{if(hid.has(n+'|'+gi))return;out.push({src:'base',t,n,gi,name:b.name,year:y,imgs:[g.f,...g.h].filter(Boolean)})})})});
+    for(const n in BASE_NUM)BASE_NUM[n].forEach(b=>{if(slug(b.name)!==k)return;b.years.forEach(r=>{if(r.y!==y)return;r.s.forEach((g,gi)=>{if(!hid.has(n+'|'+gi))mk(n,gi,b.name,g)})})});
   }else{
-    const key=Object.keys(BASE_EC).find(n=>slug(n)===k),r=key&&BASE_EC[key][y];
-    (r?r.x:[]).forEach((g,gi)=>{if(hid.has('|'+gi))return;out.push({src:'base',t,gi,name:key,year:y,imgs:[g.f,...g.l].filter(Boolean)})});
+    const ek=Object.keys(BASE_EC).find(n=>slug(n)===k),r=ek&&BASE_EC[ek][y];
+    (r?r.x:[]).forEach((g,gi)=>{if(!hid.has('|'+gi))mk('',gi,ek,g)});
   }
-  EXTRA.filter(e=>e.kind==='special'&&e.t===t&&slug(e.name)===k&&e.year===y).forEach(e=>out.push({src:'extra',id:e.id,t,name:e.name,year:y,number:e.number,imgs:[e.flag,...(e.imgs||[])].filter(Boolean).map(blob)}));
+  EXTRA.filter(e=>e.kind==='special'&&e.t===t&&slug(e.name)===k&&e.year===y).forEach(e=>out.push({src:'extra',id:e.id,t,name:e.name,year:y,number:e.number,flagTok:e.flag||'none',itemToks:e.imgs||[],flag:blob(e.flag),items:(e.imgs||[]).map(blob)}));
   return out;
 }
 async function removeGroup(g){
   if(g.src==='extra'){const e=EXTRA.find(x=>x.id===g.id);await DB.doc('extra/'+g.id).delete();for(const i of assetIds(e||{}))try{await AS.delete(i)}catch(_){}}
-  else await DB.doc('extra/hide-'+slug(g.name)+'-'+g.year+'-'+(g.n||'x')+'-'+g.gi).set({kind:'hide',t:g.t,name:g.name,year:g.year,n:g.n||'',gi:g.gi});
+  else{
+    if(g.spedit){const e=EXTRA.find(x=>x.id===g.spedit);await DB.doc('extra/'+g.spedit).delete();for(const i of assetIds(e||{}))try{await AS.delete(i)}catch(_){}}
+    await DB.doc('extra/hide-'+slug(g.name)+'-'+g.year+'-'+(g.n||'x')+'-'+g.gi).set({kind:'hide',t:g.t,name:g.name,year:g.year,n:g.n||'',gi:g.gi});
+  }
 }
 function tab3(){
   const mod=AM==='mod',typeSel=`<div><label>Type</label><select id="sType"><option value="driver">Casque spécial d’un pilote</option><option value="team">Livrée spéciale d’une écurie</option></select></div>`;
   if(mod){
-    $('adBody').innerHTML=`<section class="ad"><h2>Modifier un casque ou une livrée</h2><div class="row2">${typeSel}<div><label>Pilote ou écurie</label><input id="sName" list="dlD"></div></div>${YS('s',false)}<button class="sv" id="show">Afficher</button><div id="sList" style="margin-top:14px"></div></section>`;
+    $('adBody').innerHTML=`<section class="ad"><h2>Modifier un casque ou une livrée</h2><div class="row2">${typeSel}<div><label>Pilote ou écurie</label><input id="sName" list="dlD"></div></div>${YS('s',false)}<button class="sv" id="show">Afficher</button><div id="sList" style="margin-top:14px"></div><div id="sEdit"></div></section>`;
     $('sType').onchange=()=>$('sName').setAttribute('list',$('sType').value==='driver'?'dlD':'dlT');
+    let G=[];
     const show=()=>{
-      const g=spGroups($('sType').value,$('sName').value.trim(),+$('sy').value);
-      $('sList').innerHTML=g.length?g.map((x,i)=>`<div class="adi">${x.imgs.map(s=>`<img src="${s}" alt="">`).join('')}<div class="grow">${x.src==='extra'?'Ajouté par vous':'Du fichier d’origine'}${x.n?' · #'+x.n:''}</div><button data-r="${i}">Remplacer</button><button data-d="${i}">Supprimer</button></div>`).join(''):'<p class="sub">Aucun élément trouvé pour cette saison. Vérifiez le nom, ou utilisez « Ajouter ».</p>';
-      $$('[data-d]',$('sList')).forEach(b=>confirmBtn(b,async()=>{try{await removeGroup(g[+b.dataset.d]);say('Supprimé.');show()}catch(e){say('Échec : '+(e.message||e.code),false)}}));
-      $$('[data-r]',$('sList')).forEach(b=>b.onclick=()=>{REPL=g[+b.dataset.r];AM='add';admin();say('Ajoutez les nouvelles images : l’ancien élément sera retiré à l’enregistrement.')});
+      if(!$('sList'))return;
+      G=spGroups($('sType').value,$('sName').value.trim(),+$('sy').value);$('sEdit').innerHTML='';
+      $('sList').innerHTML=G.length?G.map((x,i)=>`<div class="adi">${[x.flag,...x.items].filter(Boolean).map(s=>`<img src="${s}" alt="">`).join('')}<div class="grow">${x.src==='extra'?'Ajouté par vous':'Du fichier d’origine'}${x.spedit?' (modifié)':''}${x.n?' · #'+x.n:''}</div><button data-m="${i}">Modifier</button><button data-d="${i}">Supprimer</button></div>`).join(''):'<p class="sub">Aucun élément trouvé pour cette saison. Vérifiez le nom, ou utilisez « Ajouter ».</p>';
+      $$('[data-d]',$('sList')).forEach(b=>confirmBtn(b,async()=>{try{await removeGroup(G[+b.dataset.d]);say('Supprimé.');show();setTimeout(show,700)}catch(e){say('Échec : '+(e.message||e.code),false)}}));
+      $$('[data-m]',$('sList')).forEach(b=>b.onclick=()=>edit(G[+b.dataset.m]));
     };
+    function edit(g){
+      const row=(label,url,fid,cid)=>`<div class="f"><label>${label}</label>${url?`<img class="cur" src="${url}" alt=""> `:'<span class="curw">aucune image pour le moment</span>'}<input id="${fid}" type="file" accept="image/*">${url?`<label class="chk"><input type="checkbox" id="${cid}" style="width:auto"> Retirer</label>`:''}</div>`;
+      $('sEdit').innerHTML=`<div class="ad" style="margin-top:14px"><h2>Modifier : ${nice(g.name)} · ${g.year}${g.n?' · #'+g.n:''}</h2><p class="sub">Changez seulement ce que vous voulez : une image laissée vide reste inchangée.</p><div class="row2">${row('Drapeau du Grand Prix',g.flag,'eFlag','eFlagDel')}${g.items.map((u,i)=>row('Image '+(i+1),u,'eImg'+i,'eDel'+i)).join('')}<div class="f"><label>Ajouter d’autres images</label><input id="eAdd" type="file" accept="image/*" multiple></div></div><button class="sv" id="eSave">Enregistrer les changements</button> <button class="tab" id="eCancel">Annuler</button></div>`;
+      $('eCancel').onclick=()=>{$('sEdit').innerHTML=''};
+      $('sEdit').scrollIntoView({behavior:'smooth'});
+      $('eSave').onclick=e=>run(e.target,async()=>{
+        const ff=$('eFlag').files[0],old=[];let flag=g.flagTok;
+        if(ff){if(g.flagTok.length>=5)old.push(g.flagTok);flag=await upImg(ff,200)}
+        else if($('eFlagDel')&&$('eFlagDel').checked){if(g.flagTok.length>=5)old.push(g.flagTok);flag='none'}
+        const toks=[];
+        for(let i=0;i<g.itemToks.length;i++){
+          const f=$('eImg'+i).files[0],del=$('eDel'+i).checked,tk=g.itemToks[i];
+          if(f){if(tk.length>=5)old.push(tk);toks.push(await upImg(f,600))}else if(del){if(tk.length>=5)old.push(tk)}else toks.push(tk);
+        }
+        for(const f of [...$('eAdd').files])toks.push(await upImg(f,600));
+        if(flag==='none'&&!toks.length)throw new Error('Il ne reste aucune image : utilisez « Supprimer » pour retirer cet élément.');
+        if(g.src==='extra'){const cur=EXTRA.find(x=>x.id===g.id)||{};const {id:_i,...rest}=cur;await DB.doc('extra/'+g.id).set({...rest,flag:flag==='none'?null:flag,imgs:toks})}
+        else await DB.doc('extra/'+(g.spedit||'spe-'+slug(g.name)+'-'+g.year+'-'+(g.n||'x')+'-'+g.gi)).set({kind:'spedit',t:g.t,name:g.name,year:g.year,n:g.n||'',gi:g.gi,flag,items:toks});
+        for(const a of old)try{await AS.delete(a)}catch(_){}
+        show();setTimeout(()=>{if(!$('eSave'))show()},700);
+      });
+    }
     $('show').onclick=show;return;
   }
   $('adBody').innerHTML=`<section class="ad"><h2>Ajouter un casque ou une livrée spéciale</h2><div class="row2">${typeSel}<div><label>Nom du pilote ou de l’écurie</label><input id="sName" list="dlD"></div></div><p class="sub" id="sHint"></p>
@@ -521,13 +566,13 @@ function tab3(){
 function adminList(){
   const L=$('adList');if(!L)return;
   const lab=e=>({team:`Écurie ${e.year} · ${e.name}`,gp:`Grand Prix ${e.year} · #${e.n} ${e.country||''}`,
-    special:`${e.t==='team'?'Livrée spéciale':'Casque spécial'} ${e.year} · ${nice(e.name||'')}`,hide:`Élément retiré (${e.t==='team'?'livrée':'casque'}) ${e.year} · ${nice(e.name||'')}`,driver:`Pilote ${e.year} · ${nice(e.name||'')}`}[e.kind]||e.id);
+    special:`${e.t==='team'?'Livrée spéciale':'Casque spécial'} ${e.year} · ${nice(e.name||'')}`,hide:`Élément retiré (${e.t==='team'?'livrée':'casque'}) ${e.year} · ${nice(e.name||'')}`,spedit:`Modification ${e.t==='team'?'de livrée':'de casque'} ${e.year} · ${nice(e.name||'')}`,driver:`Pilote ${e.year} · ${nice(e.name||'')}`}[e.kind]||e.id);
   L.innerHTML=EXTRA.length?[...EXTRA].sort((a,b)=>(b.year||0)-(a.year||0)||a.id.localeCompare(b.id)).map(e=>{
     const imgs=assetIds(e).slice(0,4).map(i=>`<img src="${blob(i)}" alt="">`).join('');
-    return `<div class="adi">${imgs}<div class="grow">${lab(e)}</div><button data-del="${e.id}">${e.kind==='hide'?'Restaurer':'Supprimer'}</button></div>`}).join(''):'<p class="sub">Aucun ajout pour le moment.</p>';
+    return `<div class="adi">${imgs}<div class="grow">${lab(e)}</div><button data-del="${e.id}">${(e.kind==='hide'||e.kind==='spedit')?'Restaurer':'Supprimer'}</button></div>`}).join(''):'<p class="sub">Aucun ajout pour le moment.</p>';
   $$('[data-del]',L).forEach(b=>confirmBtn(b,async()=>{
     const e=EXTRA.find(x=>x.id===b.dataset.del);if(!e)return;
-    try{await DB.doc('extra/'+e.id).delete();for(const i of assetIds(e))try{await AS.delete(i)}catch(_){}say(e.kind==='hide'?'Élément restauré.':'Supprimé.')}catch(x){say('Échec : '+(x.message||x.code),false)}
+    try{await DB.doc('extra/'+e.id).delete();for(const i of assetIds(e))try{await AS.delete(i)}catch(_){}say((e.kind==='hide'||e.kind==='spedit')?'Élément restauré.':'Supprimé.')}catch(x){say('Échec : '+(x.message||x.code),false)}
   }));
 }
 function listDrivers(){
