@@ -5718,5 +5718,17 @@
    "b1",
    "b2"
   ]
+ },
+ "spe-alexander-albon-2025-23-2": {
+  "kind": "spedit",
+  "t": "driver",
+  "name": "Alexander ALBON",
+  "year": 2025,
+  "n": "23",
+  "gi": 2,
+  "flag": "base",
+  "items": [
+   "182fe2bc7dae704306e91457fe73eb92"
+  ]
  }
 }
