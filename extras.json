@@ -5680,5 +5680,17 @@
   "items": [
    "1e43c1468b1519b627b94cc1086c5688"
   ]
+ },
+ "spe-lando-norris-2026-4-0": {
+  "kind": "spedit",
+  "t": "driver",
+  "name": "Lando NORRIS",
+  "year": 2026,
+  "n": "4",
+  "gi": 0,
+  "flag": "base",
+  "items": [
+   "8331be3eac91c7af17d57e5be4b0ff7a"
+  ]
  }
 }
